@@ -18,13 +18,13 @@ import io.cucumber.java.en.When;
 
 public class logintests {
     WebDriver driver = new ChromeDriver();
-    @Given("I enter the url of domain")
-public void i_enter_the_url_of_domain() {
+    @Given("I enter the url of banking domains")
+public void i_enter_the_url_of_banking_domains() {
     driver.get("https://demowebshop.tricentis.com/");
     driver.getTitle();
 }
-@When("I enter customer credentials")
-public void i_enter_customer_credentials() {
+@When("I enter customer banking credentials")
+public void i_enter_customer_banking_credentials() {
     Actions actions = new Actions(driver);
 
     WebElement computersMenu = driver.findElement(By.xpath("//a[@href='/computers']"));
@@ -98,8 +98,8 @@ public void i_enter_customer_credentials() {
     // accSubmenu.click();
     // System.out.println("✅ Clicked on 'Accessories'"); 
 }
-@Then("I can login domain successfully")
-public void i_can_login_domain_successfully() {
+@Then("I can login banking domain successfully")
+public void i_can_login_banking_domain_successfully() {
 
     driver.quit();
 }
