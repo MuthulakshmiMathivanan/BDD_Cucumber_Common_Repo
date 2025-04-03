@@ -19,7 +19,7 @@ import io.cucumber.junit.Cucumber;
               "html:target/cucumber-reports.html",
               "json:target/cucumber-reports.json",
               "junit:target/cucumber-reports.xml"}
-              //      dryRun=true,
+                   //dryRun=true
  //plugin = {"json:target/cucumber.json"},
 //          tags="@ui"
 //      "io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm"
