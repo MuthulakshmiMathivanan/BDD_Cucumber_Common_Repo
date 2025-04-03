@@ -10,8 +10,10 @@ import io.cucumber.junit.Cucumber;
  
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources",
-        //features ="src/test/resources/Muthu_28MAR2025_ParaBankBillPayment.feature",
+        //features = "src/test/resources",
+
+        features ="src/test/resources/Arumugam_3APR2025_CompDBReg.feature",
+        //features ="src/test/resources/Arumugam_3APR2025_CompDBSearch.feature",
        //features = "src/test/resources/Hover.feature",  //To run a specific feature file
        //features = "src/test/resources/Dropdown.feature",
         glue= {"stepDefinitions"},

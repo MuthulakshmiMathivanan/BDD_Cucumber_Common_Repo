@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="15.131" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-04-03T09:23:20.602738200Z">
-<testcase classname="Test the functionality of domain RahulAutomation Practice" name="Test the Navvigation and Back operations in Academic Domain" time="14.681">
+<testsuite name="Cucumber" time="47.426" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-04-03T13:47:32.390353600Z">
+<testcase classname="Test the functionality of domain Registration" name="Test the banking operations in customer Registration" time="12.6">
 <system-out><![CDATA[
-Given I enter into the Academy Domain.......................................passed
-When I click the OpenWindow Element.........................................passed
-And I navigated to another site.............................................passed
-Then again Back to the Main URL.............................................passed
+Given I enter the url of Registraion domain.................................passed
+When I enter customer Registration Details..................................passed
+Then I can able to Registration successfully................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test the functionality of domain Registration" name="Test the banking operations in customer CompDBlogin" time="12.06">
+<system-out><![CDATA[
+Given I enter the url of domain CompDBlogin.................................passed
+When I enter customer credentials of CompDBlogin............................passed
+Then I can login domain of CompDBlogin successfully.........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test the functionality of domain Registration" name="Test the Search  ComputerDatabase" time="10.169">
+<system-out><![CDATA[
+Given I enter the Search url of ComputerDatabase............................passed
+When I enter the ComputerDatabase name......................................passed
+Then I can able to Search ComputerDatabase..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test the functionality of domain Registration" name="Test the cancel of ComputerDatabase" time="12.293">
+<system-out><![CDATA[
+Given I enter the cancel url of ComputerDatabase............................passed
+When I enter the ComputerDatabase Info......................................passed
+Then I can able to cancel ComputerDatabase..................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
