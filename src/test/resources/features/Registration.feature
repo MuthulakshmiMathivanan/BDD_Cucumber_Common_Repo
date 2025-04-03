@@ -1,12 +1,11 @@
 
-@tag
-Feature: Register and login to the bank website
- 
+ Feature: User Registration and Login in ParaBank
 
-  @tag1
-  Scenario: Register a new user in ParaBank Website
-    Given I want to Register a new user in ParaBank Website
+  Scenario: Register and login to ParaBank
+    Given I launch the ParaBank website
+    When I register a new user
     When I log in with the registered credentials
     Then I should be successfully logged in
+
 
     
