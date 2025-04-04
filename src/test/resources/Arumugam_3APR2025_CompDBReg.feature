@@ -1,4 +1,4 @@
-Feature: Test the functionality of domain Registration
+Feature: Arumugam_3APR2025_domain_CompDBReg
  
 Scenario: Test the banking operations in customer Registration
     Given I enter the url of Registraion domain

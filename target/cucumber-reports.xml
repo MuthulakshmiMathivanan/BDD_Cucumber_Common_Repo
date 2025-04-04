@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="47.426" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-04-03T13:47:32.390353600Z">
-<testcase classname="Test the functionality of domain Registration" name="Test the banking operations in customer Registration" time="12.6">
+<testsuite name="Cucumber" time="54.141" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-04-04T07:44:46.364593900Z">
+<testcase classname="Arumugam_3APR2025_domain_CompDBReg" name="Test the banking operations in customer Registration" time="14.495">
 <system-out><![CDATA[
 Given I enter the url of Registraion domain.................................passed
 When I enter customer Registration Details..................................passed
 Then I can able to Registration successfully................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Test the functionality of domain Registration" name="Test the banking operations in customer CompDBlogin" time="12.06">
+<testcase classname="Arumugam_3APR2025_domain_CompDBReg" name="Test the banking operations in customer CompDBlogin" time="17.292">
 <system-out><![CDATA[
 Given I enter the url of domain CompDBlogin.................................passed
 When I enter customer credentials of CompDBlogin............................passed
 Then I can login domain of CompDBlogin successfully.........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Test the functionality of domain Registration" name="Test the Search  ComputerDatabase" time="10.169">
+<testcase classname="Arumugam_3APR2025_domain_CompDBReg" name="Test the Search  ComputerDatabase" time="9.62">
 <system-out><![CDATA[
 Given I enter the Search url of ComputerDatabase............................passed
 When I enter the ComputerDatabase name......................................passed
 Then I can able to Search ComputerDatabase..................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Test the functionality of domain Registration" name="Test the cancel of ComputerDatabase" time="12.293">
+<testcase classname="Arumugam_3APR2025_domain_CompDBReg" name="Test the cancel of ComputerDatabase" time="12.395">
 <system-out><![CDATA[
 Given I enter the cancel url of ComputerDatabase............................passed
 When I enter the ComputerDatabase Info......................................passed
