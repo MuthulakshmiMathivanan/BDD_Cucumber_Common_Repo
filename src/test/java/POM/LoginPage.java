@@ -1,4 +1,4 @@
-package pom;
+package POM;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
-    WebDriver driver = new ChromeDriver();
+      WebDriver driver = new ChromeDriver();
     public By customerlogin=(By.xpath("//input[@id='Email']"));
     
     @FindBy(xpath=("//input[@id='Password']"))
@@ -23,4 +23,5 @@ public class LoginPage {
     public void enterPassword(String password) {
         passwordTextbox.sendKeys(password);
     }
+    
 }

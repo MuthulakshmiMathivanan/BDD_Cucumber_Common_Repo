@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testsuite name="Cucumber" time="359.595" tests="25" skipped="0" failures="0" errors="0" timestamp="2025-04-07T04:03:42.609539600Z">
 <testcase classname="Test the functionality of automation bookstore" name="Test the filter  operations in automation bookstore" time="13.655">
 <system-out><![CDATA[
@@ -105,11 +106,15 @@ Then I navigated to that window.............................................pass
 ]]></system-out>
 </testcase>
 <testcase classname="Test the functionality of domain RahulAutomation Practice" name="Test the Navvigation and Back operations in Academic Domain" time="11.203">
+=======
+<testsuite name="Cucumber" time="62.568" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-04-04T11:29:11.665876900Z">
+<testcase classname="Krithika_04APR_2025_Community_Voting" name="User votes in the community poll" time="61.816">
+<failure/>
+>>>>>>> 309fddfa3215aed5f25d01b200d0debc0663498c
 <system-out><![CDATA[
-Given I enter into the Academy Domain.......................................passed
-When I click the OpenWindow Element.........................................passed
-And I navigated to another site.............................................passed
-Then again Back to the Main URL.............................................passed
+Given I logged into the applications........................................passed
+When I have chosen the option for community polls...........................passed
+Then I can submit the voting button.........................................undefined
 ]]></system-out>
 </testcase>
 <testcase classname="Test the functionality to test all demo apps" name="To view all the front end back end apps" time="10.97">
