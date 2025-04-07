@@ -1,11 +1,191 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="15.131" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-04-03T09:23:20.602738200Z">
-<testcase classname="Test the functionality of domain RahulAutomation Practice" name="Test the Navvigation and Back operations in Academic Domain" time="14.681">
+<testsuite name="Cucumber" time="359.595" tests="25" skipped="0" failures="0" errors="0" timestamp="2025-04-07T04:03:42.609539600Z">
+<testcase classname="Test the functionality of automation bookstore" name="Test the filter  operations in automation bookstore" time="13.655">
+<system-out><![CDATA[
+Given I enter the url of bookstore..........................................passed
+When I search books.........................................................passed
+Then I can retrive books successfully.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test the functionality of automation panda" name="Successfully book a room" time="8.503">
+<system-out><![CDATA[
+Given Open the booking application..........................................passed
+When select the room........................................................passed
+And select the date.........................................................passed
+And Enter the details.......................................................passed
+Then Book the ticket........................................................passed
+And Confirm the booking.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Site Interaction Testing" name="Verify text box functionality - #1.1" time="12.571">
+<system-out><![CDATA[
+Given I navigate to the website.............................................passed
+When I enter "John Doe" in the name text box................................passed
+And I enter "john.doe@example.com" in the email text box....................passed
+Then The text boxes should contain the entered values "John Doe" and "john.doe@example.com".passed
+]]></system-out>
+</testcase>
+<testcase classname="Site Interaction Testing" name="Verify text box functionality - #1.2" time="13.727">
+<system-out><![CDATA[
+Given I navigate to the website.............................................passed
+When I enter "Alice Ray" in the name text box...............................passed
+And I enter "alice.ray@gmail.com" in the email text box.....................passed
+Then The text boxes should contain the entered values "Alice Ray" and "alice.ray@gmail.com".passed
+]]></system-out>
+</testcase>
+<testcase classname="Site Interaction Testing" name="Select a checkbox - #1.1" time="10.347">
+<system-out><![CDATA[
+Given I navigate to the website.............................................passed
+When I select the "Home" checkbox...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Site Interaction Testing" name="Verify radio button selection - #1.1" time="10.161">
+<system-out><![CDATA[
+Given I navigate to the website.............................................passed
+When I select the "Yes" radio button........................................passed
+Then The "Yes" radio button should be selected..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Site Interaction Testing" name="Verify radio button selection - #1.2" time="33.809">
+<system-out><![CDATA[
+Given I navigate to the website.............................................passed
+When I select the "Impressive" radio button.................................passed
+Then The "Impressive" radio button should be selected.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test the functionality of domain login" name="Test the banking operations in customers login" time="19.07">
+<system-out><![CDATA[
+Given I enter the url of domains............................................passed
+When I enter customers credentials..........................................passed
+Then I can login domains successfully.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test the functionality of domain login" name="Test the login operations in customer login" time="9.715">
+<system-out><![CDATA[
+Given I enter the shops login url of domain.................................passed
+When I enter customer login credential......................................passed
+Then I can login shops successfully.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test the functionality of domain login" name="Test the login operations in customer login" time="10.125">
+<system-out><![CDATA[
+Given I enter the shop login url of domain..................................passed
+When I enter customer login credentials.....................................passed
+Then I can login shop successfully..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test the functionality of domain login" name="Test the banking operations in customer login" time="15.363">
+<system-out><![CDATA[
+Given I enter the url of banking domains....................................passed
+When I enter customer banking credentials...................................passed
+Then I can login banking domain successfully................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test the functionality of domain login" name="Test the web shop operations in customer login" time="10.689">
+<system-out><![CDATA[
+Given I enter the registration url of domain................................passed
+When I enter new customer credentials.......................................passed
+Then I can register domain successfully.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test the functionality of shopping site" name="Adding an item to the cart" time="22.91">
+<system-out><![CDATA[
+Given I navigate to the shopping page.......................................passed
+When I select a product.....................................................passed
+And I choose the size, color, and quantity..................................passed
+And I add the product to the cart...........................................passed
+Then I should be redirected to the shopping cart page.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test the functionality of domain RahulAutomation Practice" name="Test the automation operations in RahulShettyAcademy" time="9.97">
+<system-out><![CDATA[
+Given I enter into the Academy Domain of Rahul..............................passed
+When I click the OpenWindow button..........................................passed
+Then I navigated to that window.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test the functionality of domain RahulAutomation Practice" name="Test the Navvigation and Back operations in Academic Domain" time="11.203">
 <system-out><![CDATA[
 Given I enter into the Academy Domain.......................................passed
 When I click the OpenWindow Element.........................................passed
 And I navigated to another site.............................................passed
 Then again Back to the Main URL.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test the functionality to test all demo apps" name="To view all the front end back end apps" time="10.97">
+<system-out><![CDATA[
+Given The app url should be loaded properly.................................passed
+When I navigated the hover..................................................passed
+Then I can able to see all the apps.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test the functionality of DemoBlaze" name="Login with valid credentials - #1.1" time="14.707">
+<system-out><![CDATA[
+Given I navigate to the login page..........................................passed
+When I enter username "muthu123" and password "muthu123"....................passed
+And I click the login button................................................passed
+Then I can able to login....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test the functionality of DemoBlaze" name="Login with valid credentials - #1.2" time="17.105">
+<system-out><![CDATA[
+Given I navigate to the login page..........................................passed
+When I enter username "muthu456" and password "muthu456"....................passed
+And I click the login button................................................passed
+Then I can able to login....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test the functionality of DemoBlaze" name="Choosing and adding the item into the cart" time="17.383">
+<system-out><![CDATA[
+Given Should be logged in into the system...................................passed
+When I select the item from list............................................passed
+And I have to add to the cart...............................................passed
+And I have to pay the amount for the item...................................passed
+Then I can able to buy the product..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test the functionality of NotebookDropdown" name="Test the banking operations for Dropdown Notebook" time="13.906">
+<system-out><![CDATA[
+Given Notebook elements should be loaded properly...........................passed
+When I have to select the Sort by dropdown..................................passed
+And I have to select the Display............................................passed
+And I have to select the view as............................................passed
+Then I can able to select the dropdown menu.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test the functionality of MenuHover" name="Test the banking operations for Hover the menu" time="13.232">
+<system-out><![CDATA[
+Given Menu items should be loaded properly..................................passed
+When I have to hover the menu...............................................passed
+Then I can able to select the submenu.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test the functionality of Search book" name="Choosing and adding the item into the cart" time="13.617">
+<system-out><![CDATA[
+Given The url should be loaded properly.....................................passed
+When I enter the book name in the search box................................passed
+Then I can able to see the book.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test the functionality of domain demoWebApp" name="Test the banking operations in customer login" time="17.053">
+<system-out><![CDATA[
+Given I enter the url of domain.............................................passed
+When I enter customer credentials...........................................passed
+Then I can login domain successfully........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test the functionality of domain demoWebApp" name="Test the banking operations for Community Poll" time="14.119">
+<system-out><![CDATA[
+Given I logged into the application.........................................passed
+When I have choosen the option for community poll...........................passed
+Then I can submit the vote button...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test the functionality of domain demoWebApp" name="Test the banking operations for Add Cart" time="15.154">
+<system-out><![CDATA[
+Given Product should be visible to choose...................................passed
+When I have choosen the option to add cart..................................passed
+Then I can press the add cart button........................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
