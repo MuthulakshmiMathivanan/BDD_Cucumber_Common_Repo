@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="15.131" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-04-03T09:23:20.602738200Z">
-<testcase classname="Test the functionality of domain RahulAutomation Practice" name="Test the Navvigation and Back operations in Academic Domain" time="14.681">
+<testsuite name="Cucumber" time="62.568" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-04-04T11:29:11.665876900Z">
+<testcase classname="Krithika_04APR_2025_Community_Voting" name="User votes in the community poll" time="61.816">
+<failure/>
 <system-out><![CDATA[
-Given I enter into the Academy Domain.......................................passed
-When I click the OpenWindow Element.........................................passed
-And I navigated to another site.............................................passed
-Then again Back to the Main URL.............................................passed
+Given I logged into the applications........................................passed
+When I have chosen the option for community polls...........................passed
+Then I can submit the voting button.........................................undefined
 ]]></system-out>
 </testcase>
 </testsuite>
