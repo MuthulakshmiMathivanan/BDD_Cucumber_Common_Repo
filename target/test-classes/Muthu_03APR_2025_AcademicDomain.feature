@@ -1,4 +1,4 @@
-Feature: Muthu_03APR_2025_AcademicDomain 
+Feature: Test the functionality of domain RahulAutomation Practice
  
   Scenario: Test the Navvigation and Back operations in Academic Domain
     Given I enter into the Academy Domain
