@@ -1,4 +1,4 @@
-Feature: Test the functionality of domain ComputerDatabase
+Feature: Arumugam_3APR2025_ComputerDatabase
  
 Scenario: Test the cancel of ComputerDatabase
     Given I enter the cancel url of ComputerDatabase
