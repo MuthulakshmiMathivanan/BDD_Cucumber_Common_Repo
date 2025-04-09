@@ -1,4 +1,4 @@
-Feature: Muthu_28MAR2025_WEB_SearchBookCart
+Feature: Muthu_28MAR2025_Web_SearchBookCart
 
 Scenario: Choosing and adding the item into the cart
     Given The url should be loaded properly

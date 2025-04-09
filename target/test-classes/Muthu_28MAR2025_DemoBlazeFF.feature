@@ -1,4 +1,4 @@
-Feature: Muthu_28MAR2025_WEB_DemoBlazeFF
+Feature: Muthu_28MAR2025_Web_DemoBlazeFF
 
 
 Background:

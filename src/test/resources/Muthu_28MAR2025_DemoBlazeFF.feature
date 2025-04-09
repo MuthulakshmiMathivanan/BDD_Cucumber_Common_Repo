@@ -1,4 +1,4 @@
-Feature: Test the functionality of DemoBlaze
+Feature: Muthu_28MAR2025_Web_DemoBlazeFF
 
 
 Background:
