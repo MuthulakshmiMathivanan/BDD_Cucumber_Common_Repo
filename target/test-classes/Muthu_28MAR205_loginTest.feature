@@ -1,4 +1,4 @@
-Feature: Test the functionality of domain demoWebApp
+Feature: Muthu_28MAR205_WEB_loginTest
  
   Scenario: Test the banking operations in customer login
     Given I enter the url of domain
