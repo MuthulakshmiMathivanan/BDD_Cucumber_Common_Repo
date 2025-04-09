@@ -20,7 +20,8 @@ WebDriver driver = new ChromeDriver();
 @Given("The app url should be loaded properly")
 public void the_app_url_should_be_loaded_properly() {
     driver.get("https://codebase.show/projects/realworld");
-    driver.manage().window().maximize();  
+    driver.manage().window().maximize(); 
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));   
     driver.getTitle();
 }
 @When("I navigated the hover")

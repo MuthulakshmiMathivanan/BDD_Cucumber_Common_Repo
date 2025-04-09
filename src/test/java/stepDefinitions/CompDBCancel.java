@@ -1,5 +1,7 @@
 package stepDefinitions;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,6 +19,7 @@ public class CompDBCancel {
 public void i_enter_the_cancel_url_of_computer_database() {
     // Write code here that turns the phrase above into concrete actions
     driver.get("https://computer-database.gatling.io/computers?f=mas");
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
     driver.getTitle();
     }
 @When("I enter the ComputerDatabase Info")

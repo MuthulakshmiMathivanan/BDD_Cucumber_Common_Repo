@@ -1,5 +1,7 @@
 package stepDefinitions;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,6 +19,7 @@ public class SearchbookCart {
 public void the_url_should_be_loaded_properly() {
     driver.get("https://automationbookstore.dev/");
     driver.manage().window().maximize();  
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
     driver.getTitle();
 }
 @When("I enter the book name in the search box")

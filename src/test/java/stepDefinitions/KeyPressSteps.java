@@ -1,6 +1,9 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.*;
+
+import java.time.Duration;
+
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -17,6 +20,7 @@ public class KeyPressSteps {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://the-internet.herokuapp.com/key_presses"); // Replace with actual URL
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
     }
 
 @When("I press the {string} key")

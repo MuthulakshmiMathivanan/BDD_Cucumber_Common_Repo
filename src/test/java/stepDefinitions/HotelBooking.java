@@ -27,6 +27,7 @@ public class HotelBooking {
 	public void user_launch_the_application() {
 
 		driver.get("https://adactinhotelapp.com/");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
 
 	}
 	@When("user Enter The Username In Username Filed")

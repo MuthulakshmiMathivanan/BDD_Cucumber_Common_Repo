@@ -19,9 +19,11 @@ public class automationbooks {
 
      WebDriver driver = new ChromeDriver();
      WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+     
     @Given("I enter the url of bookstore")
 public void i_enter_the_url_of_bookstore() {
     driver.get("https://automationbookstore.dev/");
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
     driver.getTitle(); 
 }
 @SuppressWarnings("deprecation")

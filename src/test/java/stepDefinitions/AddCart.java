@@ -1,4 +1,6 @@
 package stepDefinitions;
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,6 +17,7 @@ public class AddCart {
 public void product_should_be_visible_to_choose() {
     driver.get("https://demowebshop.tricentis.com/");
     driver.manage().window().maximize();  
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
     driver.getTitle();
 }
 

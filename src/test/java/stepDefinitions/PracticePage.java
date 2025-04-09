@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import java.time.Duration;
 import java.util.Set;
 
 import org.openqa.selenium.By;
@@ -24,6 +25,7 @@ public class PracticePage {
 	public void user_lauch_the_automation_practice() {
 
 		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
 
 	}
 

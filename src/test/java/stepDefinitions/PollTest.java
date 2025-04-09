@@ -1,4 +1,6 @@
 package stepDefinitions;
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,6 +17,7 @@ public class PollTest {
 public void i_logged_into_the_application() {
     driver.get("https://demowebshop.tricentis.com/");
     driver.manage().window().maximize();  
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
     driver.getTitle();
 }
 @When("I have choosen the option for community poll")

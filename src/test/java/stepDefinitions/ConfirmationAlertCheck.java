@@ -26,6 +26,7 @@ public class ConfirmationAlertCheck {
     @Given("I enter the URL of the practice page for alert")
     public void i_enter_the_URL_of_the_practice_page_for_alert() {
         driver.get("https://rahulshettyacademy.com/AutomationPractice/");
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
         driver.manage().window().maximize();
     }
 

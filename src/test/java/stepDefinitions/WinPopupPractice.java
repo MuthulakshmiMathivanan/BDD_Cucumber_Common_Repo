@@ -22,6 +22,7 @@ public class WinPopupPractice {
 public void i_enter_the_url_of_practice_page() {
     driver.get("https://rahulshettyacademy.com/AutomationPractice/");
     mainWindowHandle = driver.getWindowHandle(); // Assign here after page load
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
     driver.getTitle();
 }
 @When("I click  open window button popup")

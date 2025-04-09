@@ -24,6 +24,7 @@ public class Voting {
 
         driver.manage().window().maximize();
         driver.get("https://demowebshop.tricentis.com/");
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
     }
 
     @When("I have chosen the option for community polls")

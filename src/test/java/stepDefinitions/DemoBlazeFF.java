@@ -22,6 +22,7 @@ public void i_navigate_to_the_login_page() {
     WebElement loginURL = driver.findElement(By.xpath("//a[text()='Log in']"));
     loginURL.click();
     driver.manage().window().maximize();
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
 }
 @When("I enter username {string} and password {string}")
 public void i_enter_username_and_password(String string, String string2) {

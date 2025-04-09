@@ -1,5 +1,7 @@
 package stepDefinitions;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,6 +17,7 @@ public class CompDBRegistration {
 public void i_enter_the_url_of_registraion_domain() {
     // Write code here that turns the phrase above into concrete actions
      driver.get("https://demowebshop.tricentis.com/register");
+     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
      driver.getTitle();
 }
 @When("I enter customer Registration Details")

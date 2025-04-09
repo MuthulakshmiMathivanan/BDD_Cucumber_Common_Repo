@@ -21,6 +21,7 @@ public class OpenTabStepDefinitions {
     @Given("I enter the URL of the practice page")
     public void i_enter_the_url_of_practice_page() {
         driver.get("https://rahulshettyacademy.com/AutomationPractice/");
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
         mainWindowHandle = driver.getWindowHandle(); // Save the main window handle
     }
 

@@ -1,6 +1,9 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.*;
+
+import java.time.Duration;
+
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -14,6 +17,7 @@ public class StatusCodeNavigationSteps {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://the-internet.herokuapp.com/status_codes"); 
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
     }
 
     @When("I click on status code {string}")
