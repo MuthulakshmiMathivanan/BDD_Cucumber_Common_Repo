@@ -1,4 +1,4 @@
-Feature: Muthu_28MAR205_WEB_loginTest
+Feature: Muthu_28MAR205_Web_loginTest
  
   Scenario: Test the banking operations in customer login
     Given I enter the url of domain

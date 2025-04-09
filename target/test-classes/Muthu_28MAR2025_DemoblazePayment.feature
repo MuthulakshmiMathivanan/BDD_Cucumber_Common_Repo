@@ -1,4 +1,4 @@
-Feature: Muthu_28MAR2025_WEB_DemoblazePayment
+Feature: Muthu_28MAR2025_Web_DemoblazePayment
 
 Scenario: Choosing and adding the item into the cart
     Given Should be logged in into the system

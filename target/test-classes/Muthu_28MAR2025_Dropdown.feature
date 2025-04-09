@@ -1,4 +1,4 @@
-Feature: Muthu_28MAR2025_WEB_Dropdown
+Feature: Muthu_28MAR2025_Web_Dropdown
 
 Scenario: Test the banking operations for Dropdown Notebook
    Given Notebook elements should be loaded properly
