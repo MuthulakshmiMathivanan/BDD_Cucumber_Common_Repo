@@ -1,4 +1,4 @@
-Feature: Test the functionality of Search book
+Feature: Muthu_28MAR2025_WEB_SearchBookCart
 
 Scenario: Choosing and adding the item into the cart
     Given The url should be loaded properly

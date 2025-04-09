@@ -1,4 +1,4 @@
-Feature: Test the functionality to test all demo apps
+Feature: Muthu_28MAR2025_WEB_DemoApps
 
 Scenario: To view all the front end back end apps
     Given The app url should be loaded properly
