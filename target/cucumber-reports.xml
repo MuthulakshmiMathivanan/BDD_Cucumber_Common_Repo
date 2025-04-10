@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="24.593" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-04-09T16:00:41.777455600Z">
-<testcase classname="Krithika_09042025_Reqres_API_Testing_Rest_Assured" name="Get user details" time="24.293">
+<testsuite name="Cucumber" time="0.219" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-04-09T09:25:30.173527700Z">
+<testcase classname="Validation of Login credentials" name="Validating login with valid username and password" time="0.019">
 <system-out><![CDATA[
-Given the API is available..................................................passed
-When I send a GET request to "/api/users/2".................................passed
-Then the response status code should be 200.................................passed
-And the response should contain user detail.................................passed
+Given User be in login page.................................................passed
+When User enter username "princyp6@gmail.com" and password "Princy@119".....passed
+And Click on Sign In button.................................................passed
+Then User should navigate to "Home Page"....................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
