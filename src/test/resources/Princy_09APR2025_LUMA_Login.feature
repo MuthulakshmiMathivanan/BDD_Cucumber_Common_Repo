@@ -1,5 +1,5 @@
 #@princy
-Feature: Validation of Login credentials
+Feature: Princy_09APR2025_LUMA_Login
   I want to Test Valid and Invalid credentials 
 
   
