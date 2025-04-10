@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="62.568" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-04-04T11:29:11.665876900Z">
-<testcase classname="Krithika_04APR_2025_Community_Voting" name="User votes in the community poll" time="61.816">
-<failure/>
+<testsuite name="Cucumber" time="24.593" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-04-09T16:00:41.777455600Z">
+<testcase classname="Krithika_09042025_Reqres_API_Testing_Rest_Assured" name="Get user details" time="24.293">
 <system-out><![CDATA[
-Given I logged into the applications........................................passed
-When I have chosen the option for community polls...........................passed
-Then I can submit the voting button.........................................undefined
+Given the API is available..................................................passed
+When I send a GET request to "/api/users/2".................................passed
+Then the response status code should be 200.................................passed
+And the response should contain user detail.................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
