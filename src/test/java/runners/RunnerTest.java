@@ -16,8 +16,8 @@ import io.cucumber.junit.Cucumber;
         plugin = {"pretty", 
               "html:target/cucumber-reports.html",
               "json:target/cucumber-reports.json",
-              "junit:target/cucumber-reports.xml"}
-
+              "junit:target/cucumber-reports.xml"},
+                   dryRun=false
         )
 public class RunnerTest {
 }
