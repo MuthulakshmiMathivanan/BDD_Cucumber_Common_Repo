@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="0.219" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-04-09T09:25:30.173527700Z">
-<testcase classname="Validation of Login credentials" name="Validating login with valid username and password" time="0.019">
+<testsuite name="Cucumber" time="0.44" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-04-10T04:08:28.273141500Z">
+<testcase classname="Muthu_09APR2025_Web_ReqRes" name="To view all the postman request" time="0.025">
+<failure/>
 <system-out><![CDATA[
-Given User be in login page.................................................passed
-When User enter username "princyp6@gmail.com" and password "Princy@119".....passed
-And Click on Sign In button.................................................passed
-Then User should navigate to "Home Page"....................................passed
+Given The postman url should be loaded properly.............................undefined
+When I navigated to the get url of first link...............................skipped
+Then I can able to take the request.........................................skipped
 ]]></system-out>
 </testcase>
 </testsuite>
