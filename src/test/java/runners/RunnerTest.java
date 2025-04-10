@@ -10,15 +10,15 @@ import io.cucumber.junit.Cucumber;
  
 @RunWith(Cucumber.class)
 @CucumberOptions(
- features = "src\\test\\resources\\Princy_09APR2025_LUMA_Login.feature",
+ features = "src/test/resources",
         
         glue= {"stepDefinitions"},
         plugin = {"pretty", 
               "html:target/cucumber-reports.html",
               "json:target/cucumber-reports.json",
               "junit:target/cucumber-reports.xml"},
-                   dryRun=true,
- 		tags = "@princy"
+                   dryRun=false
+                   //tags="@api"
  //plugin = {"json:target/cucumber.json"},
 //          tags="@ui"
 //      "io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm"

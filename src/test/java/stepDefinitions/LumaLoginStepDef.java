@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import POM.LumaLoginPage;
+import io.cucumber.java.After;
 import io.cucumber.java.en.*;
 
 public class LumaLoginStepDef {
@@ -15,6 +16,12 @@ public class LumaLoginStepDef {
 	WebDriver driver = new ChromeDriver();
 
 	LumaLoginPage login = new LumaLoginPage(driver);
+	
+	@After
+	public void teardown() {
+		driver.quit();
+
+	}
 	
 	@Given("User be in login page")
 	public void user_be_in_login_page() {
@@ -38,5 +45,21 @@ public class LumaLoginStepDef {
 	    assertEquals(AcutalTitle, ExpcetedTitle);
 		System.out.println(AcutalTitle);
 	}
+
+	@When("User enter username {string} and {string}")
+	public void user_enter_username_and(String username, String password) {
+		login.enterEmail(username);
+		login.enterPassword(password);
+		login.clickSignInButton(); 
+	}
+	@Then("User should see error message")
+	public void user_should_see_error_message() {
+		
+		System.out.println("Error message");
+	    
+	}
+
+
+
 
 }

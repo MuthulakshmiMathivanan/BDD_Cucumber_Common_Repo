@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="0.219" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-04-09T09:25:30.173527700Z">
-<testcase classname="Validation of Login credentials" name="Validating login with valid username and password" time="0.019">
+<testsuite name="Cucumber" time="18.527" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-04-10T09:58:34.659911100Z">
+<testcase classname="Validate Activity API" name="Get all activities and validate the first one" time="18.323">
 <system-out><![CDATA[
-Given User be in login page.................................................passed
-When User enter username "princyp6@gmail.com" and password "Princy@119".....passed
-And Click on Sign In button.................................................passed
-Then User should navigate to "Home Page"....................................passed
+Given The API is up and running.............................................passed
+When I send a GET request to "/api/v1/Activities"...........................passed
+Then The response status code should be 200.................................passed
+And The first activity should have id 1 and title "Activity 1"..............passed
 ]]></system-out>
 </testcase>
 </testsuite>
