@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
+import java.time.Duration;
 
 import org.openqa.selenium.By;
 
@@ -19,6 +20,7 @@ public class MenuHover {
 public void menu_items_should_be_loaded_properly() {
     driver.get("https://demowebshop.tricentis.com/");
     driver.manage().window().maximize();
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
     driver.getTitle(); 
 }
 @When("I have to hover the menu")

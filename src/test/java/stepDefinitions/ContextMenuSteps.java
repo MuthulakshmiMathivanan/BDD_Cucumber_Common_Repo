@@ -16,6 +16,7 @@ public class ContextMenuSteps {
     @Given("I open the context menu webpage")
     public void i_open_the_context_menu_webpage() {
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
         driver.get("https://the-internet.herokuapp.com/context_menu");  
     }
 

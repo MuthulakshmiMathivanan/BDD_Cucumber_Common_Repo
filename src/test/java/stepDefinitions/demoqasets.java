@@ -25,6 +25,7 @@ public class demoqasets {
     @Given("I navigate to the website")
 public void i_navigate_to_the_website() {
     driver.get("https://demoqa.com/elements");
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
     driver.getTitle();
 }
 @When("I enter {string} in the name text box")

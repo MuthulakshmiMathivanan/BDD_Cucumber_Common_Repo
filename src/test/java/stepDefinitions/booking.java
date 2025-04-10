@@ -28,6 +28,7 @@ public class booking {
     public void open_the_booking_application() {
         driver.get("https://automationintesting.online/");
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
         System.out.println("✅ User landed on homepage");
     }
 

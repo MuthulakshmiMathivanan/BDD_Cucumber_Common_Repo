@@ -30,6 +30,7 @@ public void i_navigate_to_the_shopping_page() {
   
    // WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
      driver.get("https://magento.softwaretestingboard.com/");
+     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
     driver.getTitle();
    System.out.println("Enter the product successfully ");
 }

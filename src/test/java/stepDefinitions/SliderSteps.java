@@ -19,6 +19,7 @@ public class SliderSteps {
     @Given("I open the slider webpage")
     public void i_open_the_slider_webpage() {
         driver.get("https://the-internet.herokuapp.com/horizontal_slider"); // Replace with your actual slider URL
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
     }
 
     @When("I move the slider to {string}")

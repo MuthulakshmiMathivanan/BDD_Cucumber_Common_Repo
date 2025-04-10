@@ -1,5 +1,7 @@
 package stepDefinitions;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,6 +25,7 @@ public class Dropdown {
     public void notebook_elements_should_be_loaded_properly() {
         driver.get("https://demowebshop.tricentis.com/notebooks");
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
         driver.getTitle();
     }
 

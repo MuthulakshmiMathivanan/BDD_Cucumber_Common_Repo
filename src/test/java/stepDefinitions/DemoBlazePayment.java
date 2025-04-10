@@ -23,6 +23,7 @@ public class DemoBlazePayment {
         WebElement loginURL = driver.findElement(By.xpath("//a[text()='Log in']"));
         loginURL.click();
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
         // WebElement username =
         // driver.findElement(By.xpath("//input[@id='loginusername']"));
         // username.sendKeys("muthu123");

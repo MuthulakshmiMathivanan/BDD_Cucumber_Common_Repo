@@ -1,5 +1,7 @@
 package stepDefinitions;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,6 +16,7 @@ public class logincustomer {
     @Given("I enter the shop login url of domain")
 public void i_enter_the_shop_login_url_of_domain() {
     driver.get("https://demowebshop.tricentis.com/login");
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
     driver.getTitle();
 }
 @When("I enter customer login credentials")

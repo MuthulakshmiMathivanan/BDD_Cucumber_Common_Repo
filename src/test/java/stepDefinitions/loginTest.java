@@ -1,5 +1,7 @@
 
 package stepDefinitions;
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -21,7 +23,8 @@ public class loginTest {
 @Given("I enter the url of domain")
 public void i_enter_the_url_of_domain() {
     driver.get("https://demowebshop.tricentis.com/login");
-    driver.manage().window().maximize();  
+    driver.manage().window().maximize();
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));    
         driver.getTitle();
 
 }

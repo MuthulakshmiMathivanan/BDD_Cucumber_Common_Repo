@@ -1,5 +1,7 @@
 package stepDefinitions;
 
+import java.time.Duration;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -16,11 +18,13 @@ import io.cucumber.java.en.When;
 public class AlertPopupCheck {
     WebDriver driver = new ChromeDriver();
     WebDriverWait wait;  // Declare wait
+    
 
     @Given("I enter the URL of the practice page for confirmation")
     public void i_enter_the_url_of_the_practice_page_for_confirmation() {
         driver.get("https://rahulshettyacademy.com/AutomationPractice/");
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
         wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(10)); // Initialize wait
     }
 

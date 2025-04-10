@@ -1,5 +1,7 @@
 package stepDefinitions;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,7 +17,8 @@ public class AcademicNavigation {
 @Given("I enter into the Academy Domain")
 public void i_enter_into_the_academy_domain() {
     driver.get("https://rahulshettyacademy.com/AutomationPractice/");
-    driver.manage().window().maximize();  
+    driver.manage().window().maximize(); 
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));   
     driver.getTitle();
 }
 @When("I click the OpenWindow Element")

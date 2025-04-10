@@ -21,6 +21,7 @@ public class logintests {
     @Given("I enter the url of banking domains")
 public void i_enter_the_url_of_banking_domains() {
     driver.get("https://demowebshop.tricentis.com/");
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
     driver.getTitle();
 }
 @When("I enter customer banking credentials")
