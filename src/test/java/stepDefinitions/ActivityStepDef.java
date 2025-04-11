@@ -15,16 +15,16 @@ public class ActivityStepDef {
         RestAssured.baseURI = "https://fakerestapi.azurewebsites.net";
     }
 
-    @When("I send a GET request to {string}")
-    public void i_send_a_get_request_to(String endpoint) {
+    @When("I send a GET requests to {string}")
+    public void i_send_a_get_requests_to(String endpoint) {
         response = RestAssured
                         .given()
                         .when()
                         .get(endpoint);
     }
 
-    @Then("The response status code should be {int}")
-    public void the_response_status_code_should_be(Integer expectedStatusCode) {
+    @Then("The responses status code should be {int}")
+    public void the_responses_status_code_should_be(Integer expectedStatusCode) {
         assertEquals(expectedStatusCode.intValue(), response.getStatusCode());
     }
 
