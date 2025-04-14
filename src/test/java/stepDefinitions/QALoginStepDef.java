@@ -39,9 +39,9 @@ WebDriver driver = new ChromeDriver();
 	    driver.findElement(By.xpath("//input[@type='submit' and @value='Login']")).click();
 	}
 	@Then("it should be redirected to homepage with title {string}")
-	public void it_should_be_redirected_to_homepage_with_title(String expectedTitle) {
+	public void it_should_be_redirected_to_homepage_with_title(String actualTitle) {
 	    
-		String actualTitle =  driver.getTitle();
+		String expectedTitle =  driver.getTitle();
 		assertEquals(expectedTitle, actualTitle);
 		driver.close();
 	

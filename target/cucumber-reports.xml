@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="98.826" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-04-14T09:17:13.634398600Z">
+<testcase classname="Princy_11APR_2025_Web_Login_Functionality" name="Validation of login using valid credentials" time="23.708">
+<system-out><![CDATA[
+Given the user should be in login page......................................passed
+When the user enter the username "princyprabha2609@gmail.com" and password "Princy@119".passed
+And the user press the login button.........................................passed
+Then it should be redirected to homepage with title "My Account"............passed
+]]></system-out>
+</testcase>
+<testcase classname="Princy_11APR_2025_Web_Login_Functionality" name="Validation of login using invaild credentials - #1.1" time="24.201">
+<system-out><![CDATA[
+Given the user should be in login page......................................passed
+When the user enters the invalid username "princyprabha2609@gmail.com" and password "Chinnu@211".passed
+And the user clicks on login button.........................................passed
+Then the user should get error message "Warning: No match for E-Mail Address and/or Password.".passed
+]]></system-out>
+</testcase>
+<testcase classname="Princy_11APR_2025_Web_Login_Functionality" name="Validation of login using invaild credentials - #1.2" time="26.851">
+<system-out><![CDATA[
+Given the user should be in login page......................................passed
+When the user enters the invalid username "princyp6@gmail.com" and password "Princy@211".passed
+And the user clicks on login button.........................................passed
+Then the user should get error message "Warning: No match for E-Mail Address and/or Password.".passed
+]]></system-out>
+</testcase>
+<testcase classname="Princy_11APR_2025_Web_Login_Functionality" name="Validation of login using invaild credentials - #1.3" time="23.813">
+<system-out><![CDATA[
+Given the user should be in login page......................................passed
+When the user enters the invalid username "princyprabha2609@gmail.com" and password "Chinnu@211".passed
+And the user clicks on login button.........................................passed
+Then the user should get error message "Warning: No match for E-Mail Address and/or Password.".passed
+]]></system-out>
+</testcase>
+</testsuite>

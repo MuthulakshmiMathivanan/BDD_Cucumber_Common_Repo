@@ -10,7 +10,7 @@ import io.cucumber.junit.Cucumber;
  
 @RunWith(Cucumber.class)
 @CucumberOptions(
- features = "src/test/resources",
+ features = "src/test/resources/Princy_11APR2025_Login.feature",
         
         glue= {"stepDefinitions"},
         plugin = {"pretty", 
