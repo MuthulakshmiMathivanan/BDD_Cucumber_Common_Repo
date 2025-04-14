@@ -1,5 +1,5 @@
 
- Feature: Yuge_03APR2025_Web_UserRegistration_ParaBank
+ Feature: Yugi_05APR2025_web_User_Registration_ParaBank
 
   Scenario: Register and login to ParaBank
     Given I launch the ParaBank website

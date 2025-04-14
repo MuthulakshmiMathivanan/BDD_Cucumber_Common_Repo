@@ -1,5 +1,5 @@
 
-Feature: Yuge_05APR2025_Web_SignUptothewebsite_DemoBlaze
+Feature: Yugi_03APR2025_Web_Signup
 
 
   @tag1
