@@ -1,3 +1,4 @@
+@Princy
 Feature: Princy_11APR_2025_Web_Login_Functionality
   
   As a user i want to login the page using the given credentials

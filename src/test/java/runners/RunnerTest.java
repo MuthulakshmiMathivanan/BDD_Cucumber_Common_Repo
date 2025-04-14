@@ -10,14 +10,15 @@ import io.cucumber.junit.Cucumber;
  
 @RunWith(Cucumber.class)
 @CucumberOptions(
- features = "src/test/resources/Princy_11APR2025_Login.feature",
+ features = "src/test/resources",
         
         glue= {"stepDefinitions"},
         plugin = {"pretty", 
               "html:target/cucumber-reports.html",
               "json:target/cucumber-reports.json",
               "junit:target/cucumber-reports.xml"},
-                   dryRun=false
+                dryRun=false,
+                tags = "@Princy"
         )
 public class RunnerTest {
 }
