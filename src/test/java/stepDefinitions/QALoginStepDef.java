@@ -50,6 +50,7 @@ WebDriver driver = new ChromeDriver();
 		
 		driver.findElement(By.xpath("//div//input[@id='input-email']")).sendKeys(uName);
 		driver.findElement(By.xpath("//div//input[@id='input-password']")).sendKeys(pWord);
+		
 	}
 
 	@When("the user clicks on login button")
