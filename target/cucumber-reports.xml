@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="215.446" tests="7" skipped="0" failures="2" errors="0" timestamp="2025-04-14T09:38:13.919011900Z">
-<testcase classname="Princy_11APR_2025_Web_Login_Functionality" name="Validation of login using valid credentials" time="24.962">
+<testsuite name="Cucumber" time="205.792" tests="7" skipped="0" failures="3" errors="0" timestamp="2025-04-14T09:58:21.443621100Z">
+<testcase classname="Princy_11APR_2025_Web_Login_Functionality" name="Validation of login using valid credentials" time="26.826">
 <failure type="org.junit.ComparisonFailure" message="expected:&lt;[Account Login]&gt; but was:&lt;[My Account]&gt;">
 <![CDATA[org.junit.ComparisonFailure: expected:<[Account Login]> but was:<[My Account]>
 	at org.junit.Assert.assertEquals(Assert.java:117)
@@ -16,7 +16,7 @@ And the user press the login button.........................................pass
 Then it should be redirected to homepage with title "My Account"............failed
 ]]></system-out>
 </testcase>
-<testcase classname="Princy_11APR_2025_Web_Login_Functionality" name="Validation of login using invaild credentials - #1.1" time="24.407">
+<testcase classname="Princy_11APR_2025_Web_Login_Functionality" name="Validation of login using invaild credentials - #1.1" time="24.836">
 <system-out><![CDATA[
 Given the user should be in login page......................................passed
 When the user enters the invalid username "princyprabha2609@gmail.com" and password "Chinnu@211".passed
@@ -24,7 +24,7 @@ And the user clicks on login button.........................................pass
 Then the user should get error message "Warning: No match for E-Mail Address and/or Password.".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Princy_11APR_2025_Web_Login_Functionality" name="Validation of login using invaild credentials - #1.2" time="25.901">
+<testcase classname="Princy_11APR_2025_Web_Login_Functionality" name="Validation of login using invaild credentials - #1.2" time="23.408">
 <system-out><![CDATA[
 Given the user should be in login page......................................passed
 When the user enters the invalid username "princyp6@gmail.com" and password "Princy@211".passed
@@ -32,15 +32,51 @@ And the user clicks on login button.........................................pass
 Then the user should get error message "Warning: No match for E-Mail Address and/or Password.".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Princy_11APR_2025_Web_Login_Functionality" name="Validation of login using invaild credentials - #1.3" time="25.645">
+<testcase classname="Princy_11APR_2025_Web_Login_Functionality" name="Validation of login using invaild credentials - #1.3" time="23.879">
+<failure type="org.openqa.selenium.NoSuchElementException" message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(text(), 'Warning: No match')]&quot;}
+  (Session info: chrome=135.0.7049.85)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f268b326e3dce3d8da36124b482f72b8, findElement {using=xpath, value=//div[contains(text(), 'Warning: No match')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\PPRABH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60346}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60346/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f268b326e3dce3d8da36124b482f72b8">
+<![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(text(), 'Warning: No match')]"}
+  (Session info: chrome=135.0.7049.85)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f268b326e3dce3d8da36124b482f72b8, findElement {using=xpath, value=//div[contains(text(), 'Warning: No match')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\PPRABH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60346}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60346/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f268b326e3dce3d8da36124b482f72b8
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at stepDefinitions.QALoginStepDef.the_user_should_get_error_message(QALoginStepDef.java:65)
+	at ✽.the user should get error message "Warning: No match for E-Mail Address and/or Password."(file:///C:/Users/pprabhakarans/Desktop/Project/BDD_Cucumber_Common_Repo/src/test/resources/Princy_11APR2025_Login.feature:16)
+]]>
+</failure>
 <system-out><![CDATA[
 Given the user should be in login page......................................passed
 When the user enters the invalid username "princyprabha2609@gmail.com" and password "Chinnu@211".passed
 And the user clicks on login button.........................................passed
-Then the user should get error message "Warning: No match for E-Mail Address and/or Password.".passed
+Then the user should get error message "Warning: No match for E-Mail Address and/or Password.".failed
 ]]></system-out>
 </testcase>
-<testcase classname="Princy_12APR2025_Web_Component" name="Change view to List" time="27.845">
+<testcase classname="Princy_12APR2025_Web_Component" name="Change view to List" time="24.405">
 <system-out><![CDATA[
 Given the user is on the homepage...........................................passed
 When the user navigates to Components -> Monitors...........................passed
@@ -49,7 +85,7 @@ When the user selects List view.............................................pass
 Then the products should be displayed in list format........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Princy_12APR2025_Web_Component" name="Change view to Grid" time="27.389">
+<testcase classname="Princy_12APR2025_Web_Component" name="Change view to Grid" time="25.677">
 <system-out><![CDATA[
 Given the user is on the homepage...........................................passed
 When the user navigates to Components -> Monitors...........................passed
@@ -58,25 +94,25 @@ When the user selects Grid view.............................................pass
 Then the products should be displayed in grid format........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Princy_11APR2025_Web_MyAccount_Add Address" name="Adding a new valid shipping address" time="58.942">
+<testcase classname="Princy_11APR2025_Web_MyAccount_Add Address" name="Adding a new valid shipping address" time="56.389">
 <failure type="org.openqa.selenium.NoSuchElementException" message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(text(), 'Your address has')]&quot;}
   (Session info: chrome=135.0.7049.85)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.29.0', revision: '5fc1ec94cb'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [751bda709fced31b0234e64bfb11a688, findElement {using=xpath, value=//div[contains(text(), 'Your address has')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\PPRABH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58857}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58857/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 751bda709fced31b0234e64bfb11a688">
+Command: [27a3873b4a6204e759a2eff3afa7f91e, findElement {using=xpath, value=//div[contains(text(), 'Your address has')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\PPRABH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60742}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60742/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 27a3873b4a6204e759a2eff3afa7f91e">
 <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(text(), 'Your address has')]"}
   (Session info: chrome=135.0.7049.85)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.29.0', revision: '5fc1ec94cb'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [751bda709fced31b0234e64bfb11a688, findElement {using=xpath, value=//div[contains(text(), 'Your address has')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\PPRABH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58857}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58857/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 751bda709fced31b0234e64bfb11a688
+Command: [27a3873b4a6204e759a2eff3afa7f91e, findElement {using=xpath, value=//div[contains(text(), 'Your address has')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\PPRABH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60742}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60742/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 27a3873b4a6204e759a2eff3afa7f91e
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
