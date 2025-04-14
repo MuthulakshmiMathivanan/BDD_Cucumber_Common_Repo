@@ -45,13 +45,8 @@
     <groupId>io.cucumber</groupId>
     <artifactId>cucumber-jvm-deps</artifactId>
     <version>1.0.6</version>
-    <scope>provided</scope>
 </dependency>
-<dependency>
-    <groupId>io.rest-assured</groupId>
-    <artifactId>rest-assured</artifactId>
-    <version>5.5.1</version>
-</dependency>
+
 
  
 </dependencies>
