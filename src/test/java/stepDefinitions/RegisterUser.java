@@ -6,7 +6,6 @@ import org.openqa.selenium.WebDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-
 public class RegisterUser {
     WebDriver driver;
     AutomationExercise AE;
@@ -24,10 +23,12 @@ public class RegisterUser {
     public void i_verify_that_the_home_page_is_visible_successfully() {
         AE.verifyHome();
     }
+
     @When("I click on the Signup\\/Login button")
     public void i_click_on_the_signup_login_button() {
-    	AE.clickSignupLogin();
+        AE.clickSignupLogin();
     }
+
     @When("I verify that the New User Signup option is available")
     public void i_verify_that_the_new_user_signup_option_is_available() {
         AE.verifyNewUserSignupVisible();
@@ -43,9 +44,9 @@ public class RegisterUser {
         AE.clickSignupButton();
     }
 
-    @Then("I verify that 'ENTER ACCOUNT INFORMATION' section is displayed")
-    public void i_verify_that_enter_account_information_section_is_displayed() {
-        //AE.verifyTextVisible("ENTER ACCOUNT INFORMATION");
+    @Then("I verify that {string} section is displayed")
+    public void i_verify_that_section_is_displayed(String section) {
+        AE.verifyTextVisible(section);
     }
 
     @Then("I fill in all the required details")
@@ -79,8 +80,8 @@ public class RegisterUser {
         AE.clickDeleteAccount();
     }
 
-    @Then("I verify that the 'ACCOUNT DELETED!' message is shown and I click the Continue button")
-    public void i_verify_that_account_deleted_message_is_shown_and_click_continue() {
+    @Then("I verify that the {string} message is shown and I click the Continue button")
+    public void i_verify_that_the_message_is_shown_and_i_click_the_continue_button(String message) {
         AE.verifyAccountDeleted();
         AE.clickContinue();
         
