@@ -1,4 +1,4 @@
-package pom;
+package POM;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;

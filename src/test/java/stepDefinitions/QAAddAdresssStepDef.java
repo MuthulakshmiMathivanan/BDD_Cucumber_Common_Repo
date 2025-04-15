@@ -90,8 +90,8 @@ public class QAAddAdresssStepDef {
 		driver.findElement(By.xpath("//input[@name = 'default' and @value = '1']")).click();
 	}
 	
-	@When("I click the Continue button")
-	public void i_click_the_continue_button() {
+	@When("I click the Continue button to proceed")
+	public void i_click_the_continue_button_to_proceed() {
 	    driver.findElement(By.xpath("//input[@value='Continue']")).click();
 	}
 	@Then("the new shipping address should be successfully added to my address book")

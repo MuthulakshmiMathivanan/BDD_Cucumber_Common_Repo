@@ -18,7 +18,7 @@ Feature: Princy_11APR2025_Web_MyAccount_Add Address
       | Post Code  |          12345 |
     And I select country and region from dropdown
     And I choose  Default Address
-    And I click the Continue button
+    And I click the Continue button to proceed
     Then the new shipping address should be successfully added to my address book
     And I should see a success message indicating the address has been added
     And the newly added address should be marked as the default address in my address book
