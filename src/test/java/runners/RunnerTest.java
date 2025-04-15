@@ -17,8 +17,8 @@ import io.cucumber.junit.Cucumber;
               "html:target/cucumber-reports.html",
               "json:target/cucumber-reports.json",
               "junit:target/cucumber-reports.xml"},
-                dryRun=false
-                //tags = "@PrincyCart"
+                dryRun=false,
+                tags = "@Princy"
         )
 
 public class RunnerTest {
