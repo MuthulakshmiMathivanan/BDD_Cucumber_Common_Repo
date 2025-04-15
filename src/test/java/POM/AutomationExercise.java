@@ -91,6 +91,10 @@ public class AutomationExercise {
 
     @FindBy(xpath = "//a[@data-qa='continue-button']")
     public WebElement continueButton;
+    
+    @FindBy(xpath = "//h2[contains(text(),'Login to your account')]")
+    public WebElement logintoyouAccount;
+    
 
     @FindBy(xpath = "//a[contains(text(),' Logged in as ')]")
     public WebElement loggedInText;
@@ -195,6 +199,13 @@ public class AutomationExercise {
     public void clickDeleteAccount() {
         waitForElementToBeVisible(deleteAccountButton);
         deleteAccountButton.click();
+    }
+    public void checkDeleteAccount() {
+        waitForElementToBeVisible(deleteAccountButton);
+        boolean s = deleteAccountButton.isDisplayed();
+        if (s) {
+			System.out.println("Delete button is displayed");
+		}
     }
 
     public void verifyAccountDeleted() {
