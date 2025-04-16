@@ -62,7 +62,7 @@ public class RegisterUser {
 
     @Then("I verify that the account creation confirmation message is displayed")
     public void i_verify_that_the_account_creation_confirmation_message_is_displayed() {
-       // AE.verifyAccountCreated();
+        AE.verifyAccountCreated();
        // AE.clickContinue();
        // AE.verifyLoggedInUsernameVisible();
        // AE.clickDeleteAccount();
