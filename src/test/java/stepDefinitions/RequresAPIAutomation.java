@@ -2,6 +2,9 @@ package stepDefinitions;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.List;
+import java.util.Map;
+
 import io.cucumber.java.en.*;
 
 import io.restassured.RestAssured;
@@ -44,16 +47,14 @@ public class RequresAPIAutomation {
 	@Then("The ID of the First User Name Should Be {int}")
 	public void the_id_of_the_first_user_name_should_be(Integer expectedId) {
 
-		int actualId = response.jsonPath().getInt("data[0].id");
-		assertEquals(expectedId.intValue(), actualId);
+	List<Map<String, Object>> users = response.jsonPath().getList("data");
+    if (users.isEmpty()) {
+        throw new AssertionError("No users found in the response!");
+    }
 
-		System.out.println("Console is working");
-		//	String res= response.prettyPrint();
-		//	System.out.println(res);
-
-
-
-	}
+    int actualId = (int) users.get(0).get("id");
+    assertEquals(expectedId.intValue(), actualId);
+}
 
 
 
