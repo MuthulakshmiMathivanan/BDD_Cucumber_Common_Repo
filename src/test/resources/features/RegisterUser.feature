@@ -13,5 +13,5 @@ Feature: Yugi_16APR2025_Web_Register a new user on the Automation Exercise websi
     Then I verify that the account creation confirmation message is displayed
     Then I click the Continue button
     Then I verify that I am logged in as the registered username
-    Then I click the Delete Account button
+    Then I click the Delete Account button DemoBlaze
     Then I verify that the 'ACCOUNT DELETED!' message is shown and I click the Continue button

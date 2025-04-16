@@ -7,7 +7,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
     features = "src/test/resources/features",  // Use relative path
-    glue = {"stepDefinition"}, // Ensure correct package
+    glue = {"stepDefinitions"}, // Ensure correct package
     plugin = {"pretty", "html:target/cucumber-reports.html", "json:target/cucumber-reports.json"},
     monochrome = true,
     dryRun = false
