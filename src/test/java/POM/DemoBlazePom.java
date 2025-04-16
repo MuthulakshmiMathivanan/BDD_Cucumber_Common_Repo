@@ -19,20 +19,41 @@ public class DemoBlazePom {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//a[@id='nava']")
+    @FindBy(xpath = "//a[@id='nava']") // ProductStore link
     private WebElement ProductStore;
 
-    @FindBy(xpath = "//a[@id='signin2']")
+    @FindBy(xpath = "//a[@id='signin2']") // SignIn link
     private WebElement SignIn;
 
-    @FindBy(xpath = "//input[@id='sign-username']")
+    @FindBy(xpath = "//input[@id='sign-username']") // Username input
     private WebElement SUsername;
 
-    @FindBy(xpath = "//input[@id='sign-password']")
+    @FindBy(xpath = "//input[@id='sign-password']") // Password input
     private WebElement SPassword;
 
-    @FindBy(xpath = "//button[@onclick='register()']")
+    @FindBy(xpath = "//button[@onclick='register()']") // SignUp button
     private WebElement SignUpButton;
+
+    @FindBy(xpath = "//button[contains(text(),'Continue')]") // Continue button
+    private WebElement ContinueButton;
+
+    @FindBy(id = "loginusername") // Logged-in username
+    private WebElement LoggedInUsername;
+
+    @FindBy(xpath = "//button[contains(text(),'Delete Account')]") // Delete Account button
+    private WebElement DeleteAccountButton;
+
+    // New method to verify if a specific message is visible
+    public boolean verifyMessage(String message) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        try {
+            // Check if any element contains the specific message text
+            WebElement messageElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(), '" + message + "')]")));
+            return messageElement.isDisplayed();
+        } catch (Exception e) {
+            return false; // Return false if the message is not found or visible
+        }
+    }
 
     // Click Sign Up Button
     public void clickSignUp() {
@@ -58,5 +79,23 @@ public class DemoBlazePom {
         Alert alert = driver.switchTo().alert();
         System.out.println("Alert Message: " + alert.getText());
         alert.accept();
+    }
+
+    // Method to click the Continue button
+    public void clickContinue() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(ContinueButton)).click();
+    }
+
+    // Method to verify if the logged-in username is displayed
+    public boolean verifyLoggedInUser() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        return wait.until(ExpectedConditions.visibilityOf(LoggedInUsername)).isDisplayed();
+    }
+
+    // Method to click the Delete Account button
+    public void clickDeleteAccount() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(DeleteAccountButton)).click();
     }
 }
