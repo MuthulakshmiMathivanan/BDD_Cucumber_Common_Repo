@@ -33,9 +33,15 @@ public void user_launch_the_application() {
 			cartclick.click();
 			WebElement chekout= driver.findElement(By.xpath("//*[@id=\"checkout\"]"));
 			chekout.click();
-			WebElement firstname= driver.findElement(By.id("first-name"));
-			firstname.sendKeys("raja");
+			
    
+}
+
+@When("User input the first name")
+public void user_input_the_first_name() {
+	WebElement firstname= driver.findElement(By.id("first-name"));
+	firstname.sendKeys("raja");
+    
 }
 
 	
