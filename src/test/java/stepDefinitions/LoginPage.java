@@ -3,7 +3,7 @@ package stepDefinitions;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import pom.AutomationExercise;
+import POM.AutomationExercise;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -15,7 +15,7 @@ import io.cucumber.java.Before;
 
 public class LoginPage {
     WebDriver driver;
-    AutomationExercise AE;
+    POM.AutomationExercise AE;
 
     @Before
     public void setUp() {

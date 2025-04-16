@@ -1,7 +1,7 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.*;
-import pom.AutomationExercise;
+import POM.AutomationExercise;
 import org.openqa.selenium.WebDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeDriver;

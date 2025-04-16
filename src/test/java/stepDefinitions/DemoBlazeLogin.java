@@ -1,4 +1,4 @@
-package stepDefinition;
+package stepDefinitions;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -7,11 +7,11 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import pom.DemoBlazePom;
+import POM.DemoBlazePom;
 
 public class DemoBlazeLogin {
     WebDriver driver;
-    DemoBlazePom demoBlaze;
+    POM.DemoBlazePom demoBlaze;
 
     @Given("I launch the website")
     public void i_launch_the_website() {
@@ -19,7 +19,7 @@ public class DemoBlazeLogin {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.demoblaze.com/");
-        demoBlaze = new DemoBlazePom(driver); 
+        demoBlaze = new POM.DemoBlazePom(driver); 
         System.out.println("Website launched successfully");
     }
 
