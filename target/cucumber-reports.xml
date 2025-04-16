@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="24.693" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-04-16T10:51:15.137306200Z">
-<testcase classname="Validate ReqRes API Users Endpoint" name="fetch users from page 7" time="24.319">
-<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;java.lang.Integer.intValue()&quot; because the return value of &quot;io.restassured.internal.common.path.ObjectConverter.convertObjectTo(Object, java.lang.Class)&quot; is null">
-<![CDATA[java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "io.restassured.internal.common.path.ObjectConverter.convertObjectTo(Object, java.lang.Class)" is null
-	at io.restassured.path.json.JsonPath.getInt(JsonPath.java:245)
-	at stepDefinitions.RequresAPIAutomation.the_id_of_the_first_user_name_should_be(RequresAPIAutomation.java:47)
-	at ✽.The ID of the First User Name Should Be 7(file:///C:/Users/11569/Desktop/BDD_Cucumber/BDD_Cucumber_Common_Repo/src/test/resources/Rajasekar_04APR2025_API_Reqres.feature:7)
-]]>
-</failure>
+<testsuite name="Cucumber" time="25.109" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-04-16T11:07:56.917673300Z">
+<testcase classname="Rajasekar_15APR2025_SauceCheckout" name="checkout" time="24.69">
+<failure/>
 <system-out><![CDATA[
-Given The Base URI is "https://reqres.in"...................................passed
-When I send GET request to "api/users" with query parameter "page=7"........passed
-Then The Respose Code Should be 200.........................................passed
-And The ID of the First User Name Should Be 7...............................failed
+Given User launch The Application...........................................passed
+When User input the first name..............................................undefined
+When User input the last name...............................................skipped
+When User input the Zipcode.................................................skipped
+And User Click the continue button..........................................skipped
+Then User Click finish button...............................................skipped
 ]]></system-out>
 </testcase>
 </testsuite>
