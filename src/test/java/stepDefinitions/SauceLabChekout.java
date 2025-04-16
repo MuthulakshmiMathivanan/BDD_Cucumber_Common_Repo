@@ -31,7 +31,7 @@ public void user_launch_the_application() {
 	        assertEquals("1", cartBadge.getText());
 	        WebElement cartclick= driver.findElement(By.xpath("//*[@id='shopping_cart_container']"));
 			cartclick.click();
-			WebElement chekout= driver.findElement(By.xpath("//*[@id=\"checkout\"]"));
+			WebElement chekout= driver.findElement(By.xpath("//button[contains(@id,'checkout')]"));
 			chekout.click();
 			
    
