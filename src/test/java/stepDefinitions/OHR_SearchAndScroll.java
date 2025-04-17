@@ -2,6 +2,7 @@ package stepDefinitions;
 
 import static org.junit.Assert.assertTrue;
 
+
 import java.time.Duration;
 
 import org.openqa.selenium.*;
@@ -11,6 +12,10 @@ import org.openqa.selenium.support.ui.*;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+
 import io.cucumber.java.en.*;
 
 public class OHR_SearchAndScroll {
@@ -23,7 +28,11 @@ public class OHR_SearchAndScroll {
     public void i_enter_in_the_sidebar_search_field(String module) {
         WebElement searchBox = wait.until(ExpectedConditions.visibilityOfElementLocated(
             By.xpath("//input[@placeholder='Search']")));
+
         //searchBox.clear();
+
+        searchBox.clear();
+
         searchBox.sendKeys(module);
     }
 
