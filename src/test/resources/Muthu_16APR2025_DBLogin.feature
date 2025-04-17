@@ -1,4 +1,5 @@
-Feature: Arumugam_3APR2025_CompDBLogin
+@Muthu
+Feature: Muthu_16APR2025_Web_DBLogin
  
   Scenario: Test the banking operations in customer CompDBlogin
     Given I enter the url of domain CompDBlogin
