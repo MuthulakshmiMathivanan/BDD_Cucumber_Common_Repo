@@ -12,7 +12,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class AcademicNavigation {
-
     WebDriver driver = new ChromeDriver();
 @Given("I enter into the Academy Domain")
 public void i_enter_into_the_academy_domain() {
