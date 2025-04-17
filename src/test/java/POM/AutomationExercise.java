@@ -127,8 +127,9 @@ public class AutomationExercise {
 
     public void clickSignupLogin() {
     	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    	WebElement loginButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//*[contains(text(),' Signup / Login')])[2]")));
-    	loginButton.click();
+    	WebElement loginLink = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//ul[@class='nav navbar-nav']//a[contains(text(),'Signup / Login')]")));
+    	loginLink.click();
+
 
     }
 
