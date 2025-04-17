@@ -1,4 +1,5 @@
-Feature: Arumugam_4APRIL2025_domain_CompDBReg
+@Muthu
+Feature: Muthu_13APR2025_Web_CompDBReg
  
 Scenario: Test the banking operations in customer Registration
     Given I enter the url of Registraion domain
