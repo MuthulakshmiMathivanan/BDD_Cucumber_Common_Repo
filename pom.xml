@@ -38,8 +38,7 @@
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>
             <version>7.21.1</version>
-            
-        </dependency>
+ </dependency>
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-jvm-deps</artifactId>

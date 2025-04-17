@@ -2,6 +2,8 @@
 package runners;
  
  
+import static org.junit.Assert.fail;
+
 import org.junit.runner.RunWith;
  
 import io.cucumber.junit.CucumberOptions;
@@ -20,5 +22,6 @@ import io.cucumber.junit.Cucumber;
                    dryRun=false     
         )
 public class RunnerTest {
+	
 }
  
