@@ -132,6 +132,13 @@ public class AutomationExercise {
 
 
     }
+    
+    public void clickContactUs() {
+    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    	WebElement ContactUs = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//ul[@class='nav navbar-nav']//a[contains(text(),' Contact us')]")));
+    	ContactUs.click();
+
+	}
 
     public void enterNameAndEmail(String name, String email) {
         waitForElementToBeVisible(signupName);
