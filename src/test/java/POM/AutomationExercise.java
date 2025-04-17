@@ -126,8 +126,10 @@ public class AutomationExercise {
     }
 
     public void clickSignupLogin() {
-        waitForElementToBeVisible(signUpAndLoginButton);
-        signUpAndLoginButton.click();
+    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    	WebElement loginButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//*[contains(text(),' Signup / Login')])[2]")));
+    	loginButton.click();
+
     }
 
     public void enterNameAndEmail(String name, String email) {
