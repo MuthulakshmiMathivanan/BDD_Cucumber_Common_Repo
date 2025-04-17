@@ -1,4 +1,5 @@
-Feature: Arumugam_3APR2025_ComputerDatabase
+@Muthu
+Feature: Muthu_16APR2025_Web_DBSearch
  
 Scenario: Test the cancel of ComputerDatabase
     Given I enter the cancel url of ComputerDatabase
