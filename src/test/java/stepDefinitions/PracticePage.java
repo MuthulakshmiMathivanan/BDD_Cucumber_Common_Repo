@@ -50,7 +50,9 @@ public class PracticePage {
 
 		Select select = new Select(dropdown);
 
-		select.selectByContainsVisibleText("Option3");
+		Select select2 = new Select(driver.findElement(By.id("yourDropdownId")));
+		select2.selectByVisibleText("Option3");
+
 
 		WebElement checkbox1 = driver.findElement(By.xpath("//input[contains(@value,'option1')]"));
 		WebElement checkbox2 = driver.findElement(By.xpath("//input[contains(@value,'option2')]"));
