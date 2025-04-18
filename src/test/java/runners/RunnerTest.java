@@ -13,10 +13,11 @@ import io.cucumber.junit.Cucumber;
  features = "src/test/resources",
         
         glue= {"stepDefinitions"},
-        plugin = {"pretty", 
-              "html:target/cucumber-reports.html",
-              "json:target/cucumber-reports.json",
-              "junit:target/cucumber-reports.xml"},
+        		plugin = {"pretty", 
+        		          "html:target/cucumber-reports.html",
+        		          "json:target/cucumber-reports.json",
+        		          "junit:target/cucumber-reports.xml"},
+
                    dryRun=false
         )
 public class RunnerTest {
