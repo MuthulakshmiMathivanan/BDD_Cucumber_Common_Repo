@@ -58,14 +58,17 @@ public class LoginPage {
         email.sendKeys("demo@test.yu");
         WebElement pass = driver.findElement(By.xpath("//input[@name='password']"));
         pass.sendKeys("YuTest");
-    }
-
-    @When("I click the login button")
-    public void i_click_the_login_button_Log() {
         WebElement login = driver.findElement(By.xpath("//button[contains(text(),'Login')]"));
         login.click();
         System.out.println("Clicking the login button...");
     }
+
+  //  @When("I click the login button")
+   // public void i_click_the_login_button_Log() {
+    //    WebElement login = driver.findElement(By.xpath("//button[contains(text(),'Login')]"));
+     //   login.click();
+     //   System.out.println("Clicking the login button...");
+   // }
 
     @Then("I verify that the username is displayed as logged in")
     public void i_verify_that_the_username_is_displayed_as_logged_in() {
