@@ -6,7 +6,7 @@ Background:
 
   Scenario Outline: Login with valid credentials
     When I enter username "<Username>" and password "<Password>"
-    And I click the login button
+    And I click the login button DemoBlazeFF
     Then I can able to login
 
     Examples:

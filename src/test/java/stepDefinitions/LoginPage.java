@@ -61,7 +61,7 @@ public class LoginPage {
     }
 
     @When("I click the login button")
-    public void i_click_the_login_button() {
+    public void i_click_the_login_button_Log() {
         WebElement login = driver.findElement(By.xpath("//button[contains(text(),'Login')]"));
         login.click();
         System.out.println("Clicking the login button...");

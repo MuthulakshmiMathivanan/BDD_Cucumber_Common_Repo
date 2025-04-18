@@ -9,7 +9,7 @@ Feature: Yugi_15APR2025_Web_LoginwithCorrectCredentials
     When I click on the signup/login button
     And I verify that the "Login to your account" section is visible
     And I enter the correct email address and password
-    And I click the login button
+    And I click the login button log
     Then I verify that the username is displayed as logged in
     And I check if the delete account button is visible
 
