@@ -42,13 +42,14 @@ public class DemoBlazeLogin {
     @When("handle the alert")
     public void handle_the_alert() {
         demoBlaze.alerthandle();
-    }
-
-    @Then("I click the Continue button")
-    public void i_click_the_continue_button() {
-       // demoBlaze.clickContinue();
+        // demoBlaze.clickContinue();
         System.out.println("Clicked Continue button");
     }
+
+  //  @Then("I click the Continue button")
+   // public void i_click_the_continue_button() {
+      
+   // }
 
     @Then("I verify that I am logged in as the registered username")
     public void i_verify_that_i_am_logged_in_as_the_registered_username() {
