@@ -1,5 +1,3 @@
-
-@api
 Feature: Validate Activity API
 
   Scenario: Get all activities and validate the first one

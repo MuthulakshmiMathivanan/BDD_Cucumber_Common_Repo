@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import POM.SauceDemoelement;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -18,9 +19,9 @@ public class SauceLabChekout {
 	SauceDemoelement sauce = new  SauceDemoelement(driver);
 	
 	
-	@When("User input the first name")
-	public void user_input_the_first_name() {
-		driver.get("https://www.saucedemo.com/");
+	@Given("User launch The Application")
+public void user_launch_the_application() {
+	driver.get("https://www.saucedemo.com/");
 		sauce.user_name().sendKeys("standard_user");
 		sauce.password().sendKeys("secret_sauce");
 		sauce.login_button().click();
@@ -30,11 +31,19 @@ public class SauceLabChekout {
 	        assertEquals("1", cartBadge.getText());
 	        WebElement cartclick= driver.findElement(By.xpath("//*[@id='shopping_cart_container']"));
 			cartclick.click();
-			WebElement chekout= driver.findElement(By.xpath("//*[@id=\"checkout\"]"));
+			WebElement chekout= driver.findElement(By.xpath("//button[contains(@id,'checkout')]"));
 			chekout.click();
-			WebElement firstname= driver.findElement(By.id("first-name"));
-			firstname.sendKeys("raja");
-	}
+			
+   
+}
+
+@When("User input the first name")
+public void user_input_the_first_name() {
+	WebElement firstname= driver.findElement(By.id("first-name"));
+	firstname.sendKeys("raja");
+    
+}
+
 	
 	@When("User input the last name")
 	public void user_input_the_last_name() {
