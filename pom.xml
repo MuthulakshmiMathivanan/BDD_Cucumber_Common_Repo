@@ -22,11 +22,11 @@
             <version>5.5.1</version>
         </dependency>
 
-        <!-- Selenium -->
+        <!-- Selenium (Updated version for better Chrome compatibility) -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.29.0</version>
+            <version>4.20.0</version> <!-- Updated version -->
         </dependency>
 
         <!-- WebDriverManager (for managing browser drivers automatically) -->
