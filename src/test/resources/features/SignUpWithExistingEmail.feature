@@ -1,6 +1,6 @@
 
 @tag
-Feature: Yugi_17APR2025_Web_AutomationExercise_SignUpWithExistingEmail
+Feature: Yugi_17APR2025_Web_SignUpWithExistingEmail
   I want to check if the error message pops up when i try to signup with already existing email
 
   @tag1

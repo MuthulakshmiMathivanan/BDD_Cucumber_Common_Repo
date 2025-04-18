@@ -1,4 +1,4 @@
-Feature: Yugi_16APR2025_Web_Register a new user on the Automation Exercise website
+Feature: Yugi_16APR2025_Web_Register_new_user 
 
   Scenario: Register and delete a user account
     Given I want to launch the browser and navigate to the Automation Exercise website
