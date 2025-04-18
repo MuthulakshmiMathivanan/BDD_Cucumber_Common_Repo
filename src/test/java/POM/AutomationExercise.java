@@ -18,6 +18,9 @@ public class AutomationExercise {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
+    
+    @FindBy(xpath = "//a[contains(text(), 'Test Cases')]")
+    public WebElement TestcasesButton;
 
     // Home and Signup/Login
     @FindBy(xpath = "//*[contains(text(),' Home')]")
@@ -132,6 +135,27 @@ public class AutomationExercise {
 
 
     }
+    
+    public void clickontestcase() {
+    	TestcasesButton.click();
+
+	}
+    public void verifytestcase() {
+		WebElement testcase = driver.findElement(By.xpath("//b[contains(text(),'Test Cases')]"));
+		boolean te = testcase.isDisplayed();
+		if (te) {
+			System.out.println("testcase page is displayed");
+		}
+	}
+    
+    public void verifytestcase1() {
+		WebElement testone =  driver.findElement(By.xpath("//u[contains(text(),'Test Case 1: Register User')]"));
+		boolean te = testone.isDisplayed();
+		if (te) {
+			System.out.println("testcases is displayed");
+		}
+	
+	}
     
     public void clickContactUs() {
     	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));

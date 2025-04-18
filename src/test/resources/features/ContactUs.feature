@@ -1,6 +1,6 @@
 
 @tag
-Feature: Yugi_17APR2025_Web_ContactUsForm
+Feature: Yugi_18APR2025_Web_ContactUsForm
   I want to fill up the detials of contactUs form
 
   @tag1

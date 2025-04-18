@@ -1,6 +1,6 @@
 
 @tag
-Feature: Yugi_16APR2025_Web_logout_feature 
+Feature: Yugi_18APR2025_Web_logout_feature 
   I want to check if the logout button is working correctly
 
   @tag1
