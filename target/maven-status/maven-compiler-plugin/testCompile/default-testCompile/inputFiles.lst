@@ -4,6 +4,7 @@ C:\Users\TVDI-00\eclipse-workspace\BDD_Cucumber_Common_Repo\src\test\java\stepDe
 C:\Users\TVDI-00\eclipse-workspace\BDD_Cucumber_Common_Repo\src\test\java\stepDefinitions\HotelBooking.java
 C:\Users\TVDI-00\eclipse-workspace\BDD_Cucumber_Common_Repo\src\test\java\POM\DemoBlazePom.java
 C:\Users\TVDI-00\eclipse-workspace\BDD_Cucumber_Common_Repo\src\test\java\stepDefinitions\WinPopupPractice.java
+C:\Users\TVDI-00\eclipse-workspace\BDD_Cucumber_Common_Repo\src\test\java\runners\Runner.java
 C:\Users\TVDI-00\eclipse-workspace\BDD_Cucumber_Common_Repo\src\test\java\stepDefinitions\RegisterAndLogin.java
 C:\Users\TVDI-00\eclipse-workspace\BDD_Cucumber_Common_Repo\src\test\java\stepDefinitions\SerachCompDB.java
 C:\Users\TVDI-00\eclipse-workspace\BDD_Cucumber_Common_Repo\src\test\java\stepDefinitions\AddCart.java
@@ -16,7 +17,6 @@ C:\Users\TVDI-00\eclipse-workspace\BDD_Cucumber_Common_Repo\src\test\java\stepDe
 C:\Users\TVDI-00\eclipse-workspace\BDD_Cucumber_Common_Repo\src\test\java\stepDefinitions\LoginPage.java
 C:\Users\TVDI-00\eclipse-workspace\BDD_Cucumber_Common_Repo\src\test\java\POM\ParaBankBillPayment.java
 C:\Users\TVDI-00\eclipse-workspace\BDD_Cucumber_Common_Repo\src\test\java\stepDefinitions\DemoBlazeFF.java
-C:\Users\TVDI-00\eclipse-workspace\BDD_Cucumber_Common_Repo\src\test\java\runners\RunnerTest.java
 C:\Users\TVDI-00\eclipse-workspace\BDD_Cucumber_Common_Repo\src\test\java\stepDefinitions\SignUpWithExistingEmail.java
 C:\Users\TVDI-00\eclipse-workspace\BDD_Cucumber_Common_Repo\src\test\java\stepDefinitions\DemoApp.java
 C:\Users\TVDI-00\eclipse-workspace\BDD_Cucumber_Common_Repo\src\test\java\stepDefinitions\SearchbookCart.java

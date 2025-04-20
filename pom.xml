@@ -30,7 +30,7 @@
             <version>4.20.0</version>
         </dependency>
 
-        <!-- WebDriverManager -->
+        <!-- WebDriverManager for ChromeDriver -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
@@ -105,9 +105,15 @@
                         <goals>
                             <goal>generate</goal>
                         </goals>
+                        <configuration>
+                            <jsonFiles>
+                                <jsonFile>${project.basedir}/target/cucumber-reports.json</jsonFile>
+                            </jsonFiles>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
         </plugins>
     </build>
+
 </project>

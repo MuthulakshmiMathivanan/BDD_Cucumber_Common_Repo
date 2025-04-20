@@ -4,8 +4,8 @@ stepDefinitions\SliderSteps.class
 stepDefinitions\SerachCompDB.class
 stepDefinitions\LoginPage.class
 POM\BookingHotel.class
-runners\RunnerTest.class
 stepDefinitions\LoginwithIncorrectCredentials.class
+runners\Runner.class
 stepDefinitions\shopsteps.class
 stepDefinitions\RegisterUser.class
 stepDefinitions\demoqasets.class
