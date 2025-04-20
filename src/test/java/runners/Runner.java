@@ -6,7 +6,7 @@ import io.cucumber.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-    features = "src/test/resources/ContactUs.feature", // Path to the feature files
+    features = "src/test/resources", // Path to the feature files
     glue = {"stepDefinitions"}, // Package for step definitions
     plugin = {
         "pretty", // Console output in a readable format
