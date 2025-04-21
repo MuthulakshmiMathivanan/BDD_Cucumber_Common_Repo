@@ -1,33 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="60.554" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-04-22T02:59:52.346352100Z">
-<testcase classname="Rajasekar_4APR_2025_HotelBooking" name="" time="59.988">
+<testsuite name="Cucumber" time="45.081" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-04-21T05:43:25.550701Z">
+<testcase classname="Abarna_BBD_16APR_2025_Check whether able to change Theme" name="Check whether able to change Theme" time="43.744">
 <system-out><![CDATA[
-Given user launch The Application...........................................passed
-When user Enter The Username In Username Filed..............................passed
-And : User Enter The Password In Password Field.............................passed
-Then : User Click On The Login Button And It Navigates To Search Hotel Page.passed
-When : user Select The Location.............................................passed
-When : user Select The Hotel................................................passed
-When : user Select The RoomType.............................................passed
-When : user Select The NumberofRooms........................................passed
-When : user Enters The CheckinDate..........................................passed
-When : user Enters The CheckOutDate.........................................passed
-When : user Select The AdultPerRoom.........................................passed
-When : user Select The ChildrenPerRoom......................................passed
-Then : User Click on the Search Button And It Navigates To Select Hotel page.passed
-When : user Select The RadioButton..........................................passed
-When : user Select The ContinueButton.......................................passed
-When : user Enters The FirstName............................................passed
-When : user Enters The LastName.............................................passed
-When : user Enters The Address..............................................passed
-When : user Enters The CCN Number...........................................passed
-When : user Enters The CC TYpe..............................................passed
-When : user Enters The CC Expiry Month......................................passed
-When : user Enters The CC Expiry Year.......................................passed
-When : user Enters The CC CVV...............................................passed
-Then : User Click on the BookNow Button It Navigates To Booking Cofirmation Page.passed
-When : user Click My Itineary Button........................................passed
-Then : user Click Logout Button.............................................passed
+Given user is on login page.................................................passed
+When user enterusername and password........................................passed
+And I logged into the Homepage..............................................passed
+Then I select the "Dashboard" field.........................................passed
+Then I click to change theme into "Dark"....................................passed
+And I change the theme into "light".........................................passed
+And Finally i close the browser.............................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
