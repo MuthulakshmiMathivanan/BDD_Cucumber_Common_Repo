@@ -12,7 +12,7 @@ import io.cucumber.junit.Cucumber;
  
 @RunWith(Cucumber.class)
 @CucumberOptions(
- features = "src/test/resources/Yugi_04APR2025_Web_Registration.feature",
+ features = "src/test/resources",
         
         glue= {"stepDefinitions"},
         plugin = {"pretty", 
