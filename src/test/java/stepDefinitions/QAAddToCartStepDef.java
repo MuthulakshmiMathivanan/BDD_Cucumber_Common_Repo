@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.cucumber.java.en.*;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class QAAddToCartStepDef {
 
@@ -15,6 +16,7 @@ public class QAAddToCartStepDef {
 
     @Given("I am on the Swag Labs inventory page")
     public void i_am_on_the_swag_labs_inventory_page() {
+    	 WebDriverManager.chromedriver().setup();
         driver.get("https://www.saucedemo.com/");
         driver.findElement(By.id("user-name")).sendKeys("standard_user");
         driver.findElement(By.id("password")).sendKeys("secret_sauce");

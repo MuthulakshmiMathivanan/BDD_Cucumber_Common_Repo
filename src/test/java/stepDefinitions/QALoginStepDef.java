@@ -12,6 +12,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import io.cucumber.java.After;
 import io.cucumber.java.en.*;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class QALoginStepDef {
 	
@@ -19,6 +20,7 @@ WebDriver driver = new ChromeDriver();
 
 	@Given("the user should be in login page")
 	public void the_user_should_be_in_login_page() throws InterruptedException {
+		 WebDriverManager.chromedriver().setup();
 
 		driver.get("https://tutorialsninja.com/demo/");
 		driver.manage().window().maximize();

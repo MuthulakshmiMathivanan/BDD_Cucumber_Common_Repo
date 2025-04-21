@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 public class AddCart {
@@ -15,6 +16,7 @@ public class AddCart {
 
     @Given("Product should be visible to choose")
 public void product_should_be_visible_to_choose() {
+    	 WebDriverManager.chromedriver().setup();
     driver.get("https://demowebshop.tricentis.com/");
     driver.manage().window().maximize();  
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  

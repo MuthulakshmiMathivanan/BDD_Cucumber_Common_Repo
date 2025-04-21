@@ -10,11 +10,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class AcademicNavigation {
     WebDriver driver = new ChromeDriver();
 @Given("I enter into the Academy Domain")
 public void i_enter_into_the_academy_domain() {
+	 WebDriverManager.chromedriver().setup();
     driver.get("https://rahulshettyacademy.com/AutomationPractice/");
     driver.manage().window().maximize(); 
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));   

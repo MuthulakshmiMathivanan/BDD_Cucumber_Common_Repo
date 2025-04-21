@@ -1,6 +1,7 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.*;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 import java.time.Duration;
 
@@ -18,6 +19,7 @@ public class KeyPressSteps {
     @Given("I am on the Key Press page")
     public void i_am_on_the_key_press_page() {
         driver = new ChromeDriver();
+        WebDriverManager.chromedriver().setup();
         driver.manage().window().maximize();
         driver.get("https://the-internet.herokuapp.com/key_presses"); // Replace with actual URL
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  

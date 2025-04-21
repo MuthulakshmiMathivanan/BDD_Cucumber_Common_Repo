@@ -5,6 +5,7 @@ import static io.restassured.RestAssured.*;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import io.restassured.response.Response;
 
 public class APIMGet {
@@ -13,6 +14,7 @@ public class APIMGet {
 
     @Given("the API's availability check")
     public void the_api_s_availability_check() {
+    	 WebDriverManager.chromedriver().setup();
         baseURI = "https://reqres.in";
     }
 

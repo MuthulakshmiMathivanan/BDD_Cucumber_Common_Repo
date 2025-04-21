@@ -8,6 +8,7 @@ import java.time.Duration;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DemoBlazeFF {
     WebDriver driver = new ChromeDriver();
@@ -17,6 +18,7 @@ public class DemoBlazeFF {
 public void i_navigate_to_the_login_page() {
     //System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
     driver = new ChromeDriver();
+    WebDriverManager.chromedriver().setup();
     driver.get("https://www.demoblaze.com/");
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     WebElement loginURL = driver.findElement(By.xpath("//a[text()='Log in']"));

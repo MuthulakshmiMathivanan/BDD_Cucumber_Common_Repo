@@ -14,6 +14,7 @@ import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class AlertPopupCheck {
     WebDriver driver = new ChromeDriver();
@@ -22,6 +23,7 @@ public class AlertPopupCheck {
 
     @Given("I enter the URL of the practice page for confirmation")
     public void i_enter_the_url_of_the_practice_page_for_confirmation() {
+    	 WebDriverManager.chromedriver().setup();
         driver.get("https://rahulshettyacademy.com/AutomationPractice/");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
