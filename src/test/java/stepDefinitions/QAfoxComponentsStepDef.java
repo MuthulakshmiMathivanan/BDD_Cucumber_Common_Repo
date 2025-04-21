@@ -12,7 +12,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import io.cucumber.java.en.*;
 
-public class QAComponentsStepDef {
+public class QAfoxComponentsStepDef {
 	
 	WebDriver driver = new ChromeDriver();
 	@Given("the user is on the homepage")

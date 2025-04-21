@@ -7,9 +7,6 @@ import java.time.Duration;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.*;
-
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
 
 public class OHR_AddEmployeeStepDef {

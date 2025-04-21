@@ -1,4 +1,4 @@
-@PrincyOrangeHRM
+@Princy
 Feature: Princy_15Apr2025_Web_OrangeHRM_Admin
 
   As an Admin

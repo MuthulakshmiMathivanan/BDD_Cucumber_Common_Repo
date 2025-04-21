@@ -71,12 +71,6 @@ public class ConfirmationAlertCheck {
         Alert alert = wait.until(ExpectedConditions.alertIsPresent());
         System.out.println("Confirmation Message: " + alert.getText());
         alert.accept();
-    }
-
-    @After
-    public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
-    }
+        driver.quit();
+    }    
 }

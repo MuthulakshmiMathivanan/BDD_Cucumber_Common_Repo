@@ -1,5 +1,5 @@
-@PrincyCart
-Feature: Login and add a product to cart
+@Princy
+Feature: Princy_14APR2025_Web_AddToCart
   I want to add product to cart
  
   Scenario: Add a single product to the cart 

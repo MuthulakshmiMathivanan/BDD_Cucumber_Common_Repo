@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.cucumber.java.en.*;
 
-public class QACartPageStepDef {
+public class QAfoxCartPageStepDef {
 
     WebDriver driver = new ChromeDriver();
 

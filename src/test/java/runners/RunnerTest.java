@@ -19,7 +19,8 @@ import io.cucumber.junit.Cucumber;
               "html:target/cucumber-reports.html",
               "json:target/cucumber-reports.json",
               "junit:target/cucumber-reports.xml"},
-                   dryRun=false     
+                   dryRun=false,
+                   tags="@PrincyAHB"     
         )
 public class RunnerTest {
 	

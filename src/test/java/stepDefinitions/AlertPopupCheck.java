@@ -47,12 +47,6 @@ public class AlertPopupCheck {
         System.out.println("Alert Message: " + alert.getText());
         alert.accept();
     }
-
-    @After
-    public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
-    }
+    
 }
 

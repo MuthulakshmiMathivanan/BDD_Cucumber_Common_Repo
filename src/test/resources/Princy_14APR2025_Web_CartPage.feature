@@ -1,4 +1,4 @@
-@PrincyCart
+@Princy
 Feature: Princy_14APR2025_Web_CartPage
   I want to check for cart page
   

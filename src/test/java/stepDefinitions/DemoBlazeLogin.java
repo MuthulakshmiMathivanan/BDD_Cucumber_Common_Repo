@@ -36,13 +36,5 @@ public class DemoBlazeLogin {
     @When("handle the alert")
     public void handle_the_alert() {
         demoBlaze.alerthandle(); 
-    }
-
-    @After
-    public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-            System.out.println("Browser closed");
-        }
-    }
+    }    
 }

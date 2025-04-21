@@ -6,4 +6,4 @@ Feature: Princy_16APR2025_Api_GET
     Given The API is running
     When I send GET request with end ponit "api/users?page=2"
     Then The response status code should be 200
-    #And The response should vaildate id 7 and first_name "Michael"
+    

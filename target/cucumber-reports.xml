@@ -1,93 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testsuite name="Cucumber" time="25.109" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-04-16T11:07:56.917673300Z">
-<testcase classname="Rajasekar_15APR2025_SauceCheckout" name="checkout" time="24.69">
-<failure/>
+<testsuite name="Cucumber" time="64.396" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-04-21T13:54:17.727471900Z">
+<testcase classname="Princy_18APR2025_Web_AHB" name="Validation of Login Credentials - #1.1" time="9.821">
 <system-out><![CDATA[
-Given User launch The Application...........................................passed
-When User input the first name..............................................undefined
-When User input the last name...............................................skipped
-When User input the Zipcode.................................................skipped
-And User Click the continue button..........................................skipped
-Then User Click finish button...............................................skipped
-=======
-<testsuite name="Cucumber" time="258.65" tests="11" skipped="0" failures="0" errors="0" timestamp="2025-04-16T09:21:48.721732900Z">
-<testcase classname="Muthu_13APR2025_Web_CompDBReg" name="Test the banking operations in customer Registration" time="25.965">
-<system-out><![CDATA[
-Given I enter the url of Registraion domain.................................passed
-When I enter customer Registration Details..................................passed
-Then I can able to Registration successfully................................passed
+Given User is on the Adactin Login page.....................................passed
+When User enters the valid "PrincyPrabha" and "Princy@119" for the Adactin site.passed
+And User clicks the login button............................................passed
+Then User should be redirected to Adactin Homepage..........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Muthu_13APR2025_Web_CompDBReg" name="Test the banking operations in customer CompDBlogin" time="21.426">
+<testcase classname="Princy_18APR2025_Web_AHB" name="Validation of invalid Login Credentials - #1.1" time="9.384">
 <system-out><![CDATA[
-Given I enter the url of domain CompDBlogin.................................passed
-When I enter customer credentials of CompDBlogin............................passed
-Then I can login domain of CompDBlogin successfully.........................passed
+Given User is on the Adactin Login page.....................................passed
+When User enters the invalid "TestingPrincy" and "Test@12" for the Adactin site.passed
+And User clicks the login button............................................passed
+Then It should show the error msg...........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Muthu_13APR2025_Web_CompDBReg" name="Test the Search  ComputerDatabase" time="22.686">
+<testcase classname="Princy_18APR2025_Web_AHB" name="Validation of invalid Login Credentials - #1.2" time="12.4">
 <system-out><![CDATA[
-Given I enter the Search url of ComputerDatabase............................passed
-When I enter the ComputerDatabase name......................................passed
-Then I can able to Search ComputerDatabase..................................passed
+Given User is on the Adactin Login page.....................................passed
+When User enters the invalid "Testing" and "Test@123" for the Adactin site..passed
+And User clicks the login button............................................passed
+Then It should show the error msg...........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Muthu_13APR2025_Web_CompDBReg" name="Test the cancel of ComputerDatabase" time="27.614">
+<testcase classname="Princy_18APR2025_Web_AHB" name="Validation of invalid Login Credentials - #1.1" time="9.406">
 <system-out><![CDATA[
-Given I enter the cancel url of ComputerDatabase............................passed
-When I enter the ComputerDatabase Info......................................passed
-Then I can able to cancel ComputerDatabase..................................passed
+Given User is on the Adactin Login page.....................................passed
+When User enters the invalid "TestingSuthir" and "" for the Adactin site....passed
+And User clicks the login button............................................passed
+Then It should show the error msg as Enter Username or Enter password.......passed
 ]]></system-out>
 </testcase>
-<testcase classname="Muthu_16APR2025_Web_DBLogin" name="Test the banking operations in customer CompDBlogin" time="22.51">
+<testcase classname="Princy_18APR2025_Web_AHB" name="Validation of invalid Login Credentials - #1.2" time="12.339">
 <system-out><![CDATA[
-Given I enter the url of domain CompDBlogin.................................passed
-When I enter customer credentials of CompDBlogin............................passed
-Then I can login domain of CompDBlogin successfully.........................passed
+Given User is on the Adactin Login page.....................................passed
+When User enters the invalid "" and "Test@123" for the Adactin site.........passed
+And User clicks the login button............................................passed
+Then It should show the error msg as Enter Username or Enter password.......passed
 ]]></system-out>
 </testcase>
-<testcase classname="Muthu_16APR2025_Web_DBReg" name="Test the banking operations in customer Registration" time="20.365">
+<testcase classname="Princy_18APR2025_Web_AHB" name="Validation of invalid Login Credentials - #1.3" time="10.436">
 <system-out><![CDATA[
-Given I enter the url of Registraion domain.................................passed
-When I enter customer Registration Details..................................passed
-Then I can able to Registration successfully................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Muthu_16APR2025_Web_DBReg" name="Test the banking operations in customer CompDBlogin" time="21.766">
-<system-out><![CDATA[
-Given I enter the url of domain CompDBlogin.................................passed
-When I enter customer credentials of CompDBlogin............................passed
-Then I can login domain of CompDBlogin successfully.........................passed
-]]></system-out>
-</testcase>
-<testcase classname="Muthu_16APR2025_Web_DBReg" name="Test the Search  ComputerDatabase" time="21.886">
-<system-out><![CDATA[
-Given I enter the Search url of ComputerDatabase............................passed
-When I enter the ComputerDatabase name......................................passed
-Then I can able to Search ComputerDatabase..................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Muthu_16APR2025_Web_DBReg" name="Test the cancel of ComputerDatabase" time="24.376">
-<system-out><![CDATA[
-Given I enter the cancel url of ComputerDatabase............................passed
-When I enter the ComputerDatabase Info......................................passed
-Then I can able to cancel ComputerDatabase..................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Muthu_16APR2025_Web_DBSearch" name="Test the cancel of ComputerDatabase" time="26.739">
-<system-out><![CDATA[
-Given I enter the cancel url of ComputerDatabase............................passed
-When I enter the ComputerDatabase Info......................................passed
-Then I can able to cancel ComputerDatabase..................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Muthu_16APR2025_Web_DBSearch" name="Test the Search  ComputerDatabase" time="22.761">
-<system-out><![CDATA[
-Given I enter the Search url of ComputerDatabase............................passed
-When I enter the ComputerDatabase name......................................passed
-Then I can able to Search ComputerDatabase..................................passed
->>>>>>> 34053e53bd684f52fcd7b9680671eb6dea36f5e1
+Given User is on the Adactin Login page.....................................passed
+When User enters the invalid "" and "" for the Adactin site.................passed
+And User clicks the login button............................................passed
+Then It should show the error msg as Enter Username or Enter password.......passed
 ]]></system-out>
 </testcase>
 </testsuite>
