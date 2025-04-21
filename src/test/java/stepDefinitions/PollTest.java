@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class PollTest {
     WebDriver driver = new ChromeDriver();
@@ -15,6 +16,7 @@ public class PollTest {
     
 @Given("I logged into the application")
 public void i_logged_into_the_application() {
+	 WebDriverManager.chromedriver().setup();
     driver.get("https://demowebshop.tricentis.com/");
     driver.manage().window().maximize();  
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  

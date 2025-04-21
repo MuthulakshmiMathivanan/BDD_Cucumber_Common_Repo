@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LetCodeRadioButton {
 
@@ -17,6 +18,7 @@ public class LetCodeRadioButton {
 
 @Given("user lauch the letcode radio button automation page")
 public void user_lauch_the_letcode_radio_button_automation_page() {
+	 WebDriverManager.chromedriver().setup();
     driver.get("https://letcode.in/radio");
     
 }

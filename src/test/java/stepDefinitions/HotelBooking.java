@@ -14,6 +14,7 @@ import POM.BookingHotel;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import runners.RunnerTest;
 
 public class HotelBooking {
@@ -25,7 +26,7 @@ public class HotelBooking {
 
 	@Given("user launch The Application")
 	public void user_launch_the_application() {
-
+		 WebDriverManager.chromedriver().setup();
 		driver.get("https://adactinhotelapp.com/");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
 

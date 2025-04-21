@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.cucumber.java.en.*;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class QACartPageStepDef {
 
@@ -13,6 +14,7 @@ public class QACartPageStepDef {
 
     @Given("I have added {string} to the cart")
     public void i_have_added_item_to_the_cart(String productName) {
+    	 WebDriverManager.chromedriver().setup();
         driver.get("https://www.saucedemo.com/");
         driver.findElement(By.id("user-name")).sendKeys("standard_user");
         driver.findElement(By.id("password")).sendKeys("secret_sauce");

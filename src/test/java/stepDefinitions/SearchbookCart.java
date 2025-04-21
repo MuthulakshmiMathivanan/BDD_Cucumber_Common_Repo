@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SearchbookCart {
     
@@ -17,6 +18,7 @@ public class SearchbookCart {
     
 @Given("The url should be loaded properly")
 public void the_url_should_be_loaded_properly() {
+	 WebDriverManager.chromedriver().setup();
     driver.get("https://automationbookstore.dev/");
     driver.manage().window().maximize();  
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  

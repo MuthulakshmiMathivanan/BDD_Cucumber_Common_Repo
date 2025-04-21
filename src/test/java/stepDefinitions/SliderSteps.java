@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 import java.time.Duration;
 
@@ -18,6 +18,7 @@ public class SliderSteps {
 
     @Given("I open the slider webpage")
     public void i_open_the_slider_webpage() {
+    	 WebDriverManager.chromedriver().setup();
         driver.get("https://the-internet.herokuapp.com/horizontal_slider"); // Replace with your actual slider URL
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
     }

@@ -13,12 +13,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DemoBlazePayment {
     WebDriver driver = new ChromeDriver();
 
     @Given("Should be logged in into the system")
     public void should_be_logged_in_into_the_system() {
+    	 WebDriverManager.chromedriver().setup();
         driver.get("https://demoblaze.com/index.html");
         WebElement loginURL = driver.findElement(By.xpath("//a[text()='Log in']"));
         loginURL.click();

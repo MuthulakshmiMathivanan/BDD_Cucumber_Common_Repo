@@ -12,6 +12,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import io.cucumber.java.After;
 import io.cucumber.java.en.*;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class QALoginStepDef {
 	
@@ -19,6 +20,7 @@ WebDriver driver = new ChromeDriver();
 
 	@Given("the user should be in login page")
 	public void the_user_should_be_in_login_page() throws InterruptedException {
+		 WebDriverManager.chromedriver().setup();
 
 		driver.get("https://tutorialsninja.com/demo/");
 		driver.manage().window().maximize();
@@ -40,11 +42,9 @@ WebDriver driver = new ChromeDriver();
 	}
 	@Then("it should be redirected to homepage with title {string}")
 	public void it_should_be_redirected_to_homepage_with_title(String expectedTitle) {
-	    
-		String actualTitle =  driver.getTitle();
-		assertEquals(expectedTitle, actualTitle);
-		driver.close();
-	
+	    String actualTitle = driver.getTitle();
+	    assertEquals(expectedTitle, actualTitle);
+	    driver.close();
 	}
 
 	@When("the user enters the invalid username {string} and password {string}")
@@ -52,6 +52,7 @@ WebDriver driver = new ChromeDriver();
 		
 		driver.findElement(By.xpath("//div//input[@id='input-email']")).sendKeys(uName);
 		driver.findElement(By.xpath("//div//input[@id='input-password']")).sendKeys(pWord);
+		
 	}
 
 	@When("the user clicks on login button")
@@ -60,11 +61,9 @@ WebDriver driver = new ChromeDriver();
 	}
 
 	@Then("the user should get error message {string}")
-	public void the_user_should_get_error_message(String actualErrorMsg) {
-		
-	    String expectedErrorMsg = driver.findElement(By.xpath("//div[contains(text(), 'Warning: No match')]")).getText();
+	public void the_user_should_get_error_message(String expectedErrorMsg) {
+	    String actualErrorMsg = driver.findElement(By.xpath("//div[contains(text(), 'Warning: No match')]")).getText();
 	    assertEquals(expectedErrorMsg, actualErrorMsg);
-	
 	}
 
 

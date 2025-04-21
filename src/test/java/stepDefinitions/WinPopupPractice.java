@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import io.cucumber.java.After;
 
 public class WinPopupPractice {
@@ -20,6 +21,7 @@ public class WinPopupPractice {
     private String mainWindowHandle;
     @Given("I enter the url of practice page")
 public void i_enter_the_url_of_practice_page() {
+    	 WebDriverManager.chromedriver().setup();
     driver.get("https://rahulshettyacademy.com/AutomationPractice/");
     mainWindowHandle = driver.getWindowHandle(); // Assign here after page load
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  

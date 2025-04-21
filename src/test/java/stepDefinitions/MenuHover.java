@@ -12,12 +12,14 @@ import org.openqa.selenium.By;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class MenuHover {
     WebDriver driver = new ChromeDriver();
 
 @Given("Menu items should be loaded properly")
 public void menu_items_should_be_loaded_properly() {
+	 WebDriverManager.chromedriver().setup();
     driver.get("https://demowebshop.tricentis.com/");
     driver.manage().window().maximize();
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  

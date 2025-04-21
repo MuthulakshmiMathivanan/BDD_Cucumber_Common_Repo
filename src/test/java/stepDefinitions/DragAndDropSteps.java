@@ -10,6 +10,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 import java.time.Duration;
 import static org.junit.Assert.assertEquals;
 
@@ -22,6 +24,7 @@ public class DragAndDropSteps {
 
     @Given("I am on the Drag and Drop page")
     public void i_am_on_the_drag_and_drop_page() {
+    	 WebDriverManager.chromedriver().setup();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
         driver.get("https://the-internet.herokuapp.com/drag_and_drop");

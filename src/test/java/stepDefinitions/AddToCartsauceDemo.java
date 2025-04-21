@@ -11,6 +11,7 @@ import POM.SauceDemoelement;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class AddToCartsauceDemo {
 	
@@ -20,6 +21,7 @@ public class AddToCartsauceDemo {
 	
 	@Given("user launch the application with credentilas")
 	public void user_launch_the_application_with_credentilas() {
+		 WebDriverManager.chromedriver().setup();
 		driver.get("https://www.saucedemo.com/");
 		sauce.user_name().sendKeys("standard_user");
 		sauce.password().sendKeys("secret_sauce");
