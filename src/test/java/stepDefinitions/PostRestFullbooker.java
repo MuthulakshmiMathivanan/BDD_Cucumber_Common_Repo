@@ -6,14 +6,18 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import io.*;
+import com.google.gson.JsonObject;
+
 
 import static io.restassured.RestAssured.*;
 import static org.junit.Assert.*;
 
-import org.json.JSONObject;
+
+
 
 import com.fasterxml.jackson.databind.util.JSONPObject;
-import com.google.gson.JsonObject;
+
 
 public class PostRestFullbooker {
 
@@ -27,9 +31,9 @@ public class PostRestFullbooker {
 
     @When("I send POST request to \\/auth with valid credentials")
     public void i_send_post_request_to_auth() {
-        JSONObject payload = new JSONObject();
-        payload.put("username", "admin");
-        payload.put("password", "password123");
+        JsonObject payload = new JsonObject();
+        payload.addProperty("username", "admin");
+        payload.addProperty("password", "password123");
 
         request = given()
                     .header("Content-Type", "application/json")
