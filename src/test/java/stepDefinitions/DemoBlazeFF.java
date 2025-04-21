@@ -32,11 +32,11 @@ public void i_enter_username_and_password(String string, String string2) {
        
 
 }
-@When("I click the login button")
-public void i_click_the_login_button() {
-    WebElement loginbtn = driver.findElement(By.xpath("//button[text()='Log in']"));
-    loginbtn.click();
-}
+//@When("I click the login button")
+//public void i_click_the_login_button() {
+ //   WebElement loginbtn = driver.findElement(By.xpath("//button[text()='Log in']"));
+   // loginbtn.click();
+//}
 @Then("I can able to login")
 public void i_can_able_to_login() {
     driver.quit();
