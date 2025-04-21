@@ -19,6 +19,9 @@ public class AutomationExercise {
         PageFactory.initElements(driver, this);
     }
 
+    @FindBy(xpath = "//a[contains(text(), 'Test Cases')]")
+    public WebElement TestcasesButton;
+
     // Home and Signup/Login
     @FindBy(xpath = "//*[contains(text(),' Home')]")
     public WebElement homeButton;
@@ -91,10 +94,9 @@ public class AutomationExercise {
 
     @FindBy(xpath = "//a[@data-qa='continue-button']")
     public WebElement continueButton;
-    
+
     @FindBy(xpath = "//h2[contains(text(),'Login to your account')]")
     public WebElement logintoyouAccount;
-    
 
     @FindBy(xpath = "//a[contains(text(),' Logged in as ')]")
     public WebElement loggedInText;
@@ -110,7 +112,6 @@ public class AutomationExercise {
     public WebElement newUserSignupSection;
 
     // Methods for actions
-
     public void waitForElementToBeVisible(WebElement element) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(element));
@@ -126,19 +127,36 @@ public class AutomationExercise {
     }
 
     public void clickSignupLogin() {
-    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    	WebElement loginLink = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//ul[@class='nav navbar-nav']//a[contains(text(),'Signup / Login')]")));
-    	loginLink.click();
-
-
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement loginLink = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//ul[@class='nav navbar-nav']//a[contains(text(),'Signup / Login')]")));
+        loginLink.click();
     }
-    
-    public void clickContactUs() {
-    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    	WebElement ContactUs = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//ul[@class='nav navbar-nav']//a[contains(text(),' Contact us')]")));
-    	ContactUs.click();
 
-	}
+    public void clickontestcase() {
+        TestcasesButton.click();
+    }
+
+    public void verifytestcase() {
+        WebElement testcase = driver.findElement(By.xpath("//b[contains(text(),'Test Cases')]"));
+        boolean te = testcase.isDisplayed();
+        if (te) {
+            System.out.println("testcase page is displayed");
+        }
+    }
+
+    public void verifytestcase1() {
+        WebElement testone = driver.findElement(By.xpath("//u[contains(text(),'Test Case 1: Register User')]"));
+        boolean te = testone.isDisplayed();
+        if (te) {
+            System.out.println("testcases is displayed");
+        }
+    }
+
+    public void clickContactUs() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement ContactUs = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//ul[@class='nav navbar-nav']//a[contains(text(),' Contact us')]")));
+        ContactUs.click();
+    }
 
     public void enterNameAndEmail(String name, String email) {
         waitForElementToBeVisible(signupName);
@@ -210,12 +228,13 @@ public class AutomationExercise {
         waitForElementToBeVisible(deleteAccountButton);
         deleteAccountButton.click();
     }
+
     public void checkDeleteAccount() {
         waitForElementToBeVisible(deleteAccountButton);
         boolean s = deleteAccountButton.isDisplayed();
         if (s) {
-			System.out.println("Delete button is displayed");
-		}
+            System.out.println("Delete button is displayed");
+        }
     }
 
     public void verifyAccountDeleted() {

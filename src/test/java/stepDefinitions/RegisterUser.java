@@ -44,9 +44,9 @@ public class RegisterUser {
         AE.clickSignupButton();
     }
 
-    @Then("I verify that {string} section is displayed")
-    public void i_verify_that_section_is_displayed(String section) {
-        AE.verifyTextVisible(section);
+    @Then("I verify that 'ENTER ACCOUNT INFORMATION' section is displayed")
+    public void i_verify_that_enter_account_information_section_is_displayed() {
+        AE.verifyTextVisible("ENTER ACCOUNT INFORMATION");
     }
 
     @Then("I fill in all the required details")
@@ -63,33 +63,29 @@ public class RegisterUser {
     @Then("I verify that the account creation confirmation message is displayed")
     public void i_verify_that_the_account_creation_confirmation_message_is_displayed() {
         AE.verifyAccountCreated();
-       // AE.clickContinue();
-       // AE.verifyLoggedInUsernameVisible();
-       // AE.clickDeleteAccount();
-       // AE.verifyAccountDeleted();
-       // AE.clickContinue();
+    }
+
+    @Then("I click the Continue button")
+    public void i_click_the_continue_button() {
+        AE.clickContinue();
+    }
+
+    @Then("I verify that I am logged in as the registered username")
+    public void i_verify_that_i_am_logged_in_as_the_registered_username() {
+        AE.verifyLoggedInUsernameVisible();
+    }
+
+    @Then("I click the Delete Account button")
+    public void i_click_the_delete_account_button() {
+        AE.clickDeleteAccount();
+    }
+
+    @Then("I verify that the 'ACCOUNT DELETED!' message is shown and I click the Continue button")
+    public void i_verify_that_account_deleted_message_is_shown_and_click_continue() {
+        AE.verifyAccountDeleted();
+        AE.clickContinue();
         
         // Close the browser
-       // driver.quit();
+        driver.quit();
     }
-
-  //  @Then("I click the Continue button")
-   // public void i_click_the_continue_button() {
-       
-   // }
-
-    //@Then("I verify that I am logged in as the registered username")
-    //public void i_verify_that_i_am_logged_in_as_the_registered_username() {
-       
-    //}
-
-   // @Then("I click the Delete Account button")
-   // public void i_click_the_delete_account_button() {
-       
-    //}
-
-  //  @Then("I verify that the {string} message is shown and I click the Continue button")
-   // public void i_verify_that_the_message_is_shown_and_i_click_the_continue_button(String message) {
-       
-    }
-
+}

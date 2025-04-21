@@ -76,13 +76,12 @@ public class QAAddAdresssStepDef {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		WebElement country = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//select[@id='input-country']")));
 		//WebElement country = driver.findElement(By.xpath("//select[@id = 'input-country']"));
-	    Select select = new Select(country);
-	    select.selectByIndex(120);
-	    //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));	    
-	    WebElement zone = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//select[@id='input-zone']")));
-	    Select region = new Select(zone);
-	    region.selectByIndex(8);
+	    Select countrtList = new Select(country);
+	    countrtList.selectByIndex(5);
 	    
+	   	WebElement zone = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//select[@name='zone_id']")));
+	    Select region = new Select(zone);
+	    region.selectByIndex(1);	    
 	}
 	@When("I choose  Default Address")
 	public void i_choose_default_address() {
@@ -90,8 +89,8 @@ public class QAAddAdresssStepDef {
 		driver.findElement(By.xpath("//input[@name = 'default' and @value = '1']")).click();
 	}
 	
-	@When("I click the Continue button")
-	public void i_click_the_continue_button() {
+	@When("I click the Continue button to proceed")
+	public void i_click_the_continue_button_to_proceed() {
 	    driver.findElement(By.xpath("//input[@value='Continue']")).click();
 	}
 	@Then("the new shipping address should be successfully added to my address book")
@@ -103,8 +102,9 @@ public class QAAddAdresssStepDef {
 	}
 	@Then("I should see a success message indicating the address has been added")
 	public void i_should_see_a_success_message_indicating_the_address_has_been_added() {
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		String succuessMsg = driver.findElement(By.xpath("//div[contains(text(), 'Your address has')]")).getText();
-		System.out.println(succuessMsg);
+		System.out.println("succuessMsg");
 	}
 	@Then("the newly added address should be marked as the default address in my address book")
 	public void the_newly_added_address_should_be_marked_as_the_default_address_in_my_address_book() {

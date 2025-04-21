@@ -63,11 +63,19 @@
             <version>1.0.6</version>
         </dependency>
 
-        <!-- JSpecify (only if you're using @Nullable annotations) -->
+        <!-- WebDriverManager -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.9.2</version>
+        </dependency>
+
+        <!-- JSpecify for nullness annotations -->
         <dependency>
             <groupId>org.jspecify</groupId>
             <artifactId>jspecify</artifactId>
             <version>0.3.0</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
@@ -83,14 +91,14 @@
                 </configuration>
             </plugin>
 
-            <!-- Surefire Plugin (to run Cucumber tests) -->
+            <!-- Surefire Plugin to run tests -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
                 <configuration>
                     <includes>
-                        <include>**/*Runner.java</include> <!-- This should match your runner class name -->
+                        <include>**/*RunnerTest.java</include> <!-- This should match your runner class name -->
                     </includes>
                 </configuration>
             </plugin>
