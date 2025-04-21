@@ -43,16 +43,17 @@ public class DemoBlazeLogin {
     public void handle_the_alert() {
         demoBlaze.alerthandle();
         System.out.println("Handled the alert and clicked Continue button");
-    }
-
-    @Then("I verify that I am logged in as the registered username")
-    public void i_verify_that_i_am_logged_in_as_the_registered_username() {
         boolean isLoggedIn = demoBlaze.verifyLoggedInUser();
         if (!isLoggedIn) {
             throw new AssertionError("User not logged in!");
         }
         System.out.println("User is logged in as registered username");
     }
+
+   // @Then("I verify that I am logged in as the registered username")
+  //  public void i_verify_that_i_am_logged_in_as_the_registered_username() {
+        
+   // }
 
     @Then("I click the Delete Account button")
     public void i_click_the_delete_account_button() {
