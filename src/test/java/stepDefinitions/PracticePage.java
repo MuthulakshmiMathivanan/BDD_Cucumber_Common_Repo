@@ -50,7 +50,11 @@ public class PracticePage {
 
 		Select select = new Select(dropdown);
 
-		select.selectByContainsVisibleText("Option3");
+		for (WebElement option : select.getOptions()) {
+		    if (option.getText().contains("Option3")) {
+		        option.click();
+		        break;
+		    }
 
 		WebElement checkbox1 = driver.findElement(By.xpath("//input[contains(@value,'option1')]"));
 		WebElement checkbox2 = driver.findElement(By.xpath("//input[contains(@value,'option2')]"));
@@ -60,7 +64,7 @@ public class PracticePage {
 			checkbox1.click();
 			checkbox2.click();
 			checkbox3.click();
-		}
+		}}
 
 	}
 	@When("User navigate to the child window")

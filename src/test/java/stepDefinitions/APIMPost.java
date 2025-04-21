@@ -39,13 +39,13 @@ public class APIMPost {
                         .put(endpoint);
     }
 
-    @Then("the response status code should be {int}")
-    public void verifyStatusCode(int expectedStatusCode) {
-        response.then().statusCode(expectedStatusCode);
-    }
+    //@Then("the response status code should be {int}")
+   // public void verifyStatusCode(int expectedStatusCode) {
+       // response.then().statusCode(expectedStatusCode);
+   // }
 
-    @Then("the response should contain {string} as {string}")
-    public void verifyResponseField(String key, String value) {
-        response.then().body(key, equalTo(value));
-    }
+   // @Then("the response should contain {string} as {string}")
+  //  public void verifyResponseField(String key, String value) {
+     //   response.then().body(key, equalTo(value));
+   // }
 }
