@@ -59,21 +59,21 @@ public class DemoBlazeLogin {
        // System.out.println("User is logged in as registered username");
   //  }
 
-    @Then("I click the Delete Account button")
-    public void i_click_the_delete_account_button() {
+   // @Then("I click the Delete Account button")
+   // public void i_click_the_delete_account_button() {
        // demoBlaze.clickDeleteAccount();
        // System.out.println("Clicked Delete Account button");
-    }
+   // }
 
-    @Then("I verify that the {string} message is shown and I click the Continue button")
-    public void i_verify_that_the_message_is_shown_and_i_click_the_continue_button(String message) {
+   // @Then("I verify that the {string} message is shown and I click the Continue button")
+   // public void i_verify_that_the_message_is_shown_and_i_click_the_continue_button(String message) {
        // boolean messageVisible = demoBlaze.verifyMessage(message);
        // if (!messageVisible) {
         //    throw new AssertionError("Expected message not shown: " + message);
        // }
      //   demoBlaze.clickContinue();
        // System.out.println("Verified message and clicked Continue");
-    }
+  //  }
 
     
    // public void tearDown() {
