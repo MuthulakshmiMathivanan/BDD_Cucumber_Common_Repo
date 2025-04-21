@@ -6,15 +6,15 @@ import io.cucumber.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-    features = "src/test/resources", // Path to the feature files
-    glue = {"stepDefinitions"}, // Package for step definitions
+    features = "src/test/resources", 
+    glue = {"stepDefinitions"}, 
     plugin = {
-        "pretty", // Console output in a readable format
-        "html:target/cucumber-reports.html", // Generates HTML report
-        "json:target/cucumber-reports.json", // Generates JSON report
-        "junit:target/cucumber-reports.xml" // Generates JUnit-compatible XML report
+        "pretty",
+        "html:target/cucumber-reports.html",
+        "json:target/cucumber-reports.json",  // This is what the report plugin looks for
+        "junit:target/cucumber-reports.xml"
     },
-    dryRun = false // Set to false to execute tests; true to check step definitions
+    dryRun = false
 )
 public class Runner {
 }

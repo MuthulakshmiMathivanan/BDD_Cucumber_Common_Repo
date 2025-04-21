@@ -34,7 +34,7 @@
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>5.7.0</version>
+            <version>5.9.2</version>
         </dependency>
 
         <!-- JUnit -->
@@ -61,13 +61,6 @@
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-jvm-deps</artifactId>
             <version>1.0.6</version>
-        </dependency>
-
-        <!-- WebDriverManager -->
-        <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>5.9.2</version>
         </dependency>
 
         <!-- JSpecify for nullness annotations -->
@@ -98,25 +91,29 @@
                 <version>3.0.0-M5</version>
                 <configuration>
                     <includes>
-                        <include>**/*RunnerTest.java</include> <!-- This should match your runner class name -->
+                        <include>**/Runner.java</include> <!-- This will now match your actual runner -->
                     </includes>
                 </configuration>
             </plugin>
 
-            <!-- Cucumber Report Plugin (to generate reports) -->
+            <!-- Cucumber Report Plugin -->
             <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
                 <version>5.8.5</version>
                 <executions>
                     <execution>
+                        <id>generate-cucumber-report</id>
+                        <phase>verify</phase>
                         <goals>
                             <goal>generate</goal>
                         </goals>
                         <configuration>
+                            <projectName>BDD Selenium Report</projectName>
                             <jsonFiles>
                                 <jsonFile>${project.basedir}/target/cucumber-reports.json</jsonFile>
                             </jsonFiles>
+                            <outputDirectory>${project.build.directory}</outputDirectory>
                         </configuration>
                     </execution>
                 </executions>
