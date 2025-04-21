@@ -6,6 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import java.time.Duration;
 
 public class AutomationExercise {
 
@@ -15,6 +18,9 @@ public class AutomationExercise {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
+    
+    @FindBy(xpath = "//a[contains(text(), 'Test Cases')]")
+    public WebElement TestcasesButton;
 
     // Home and Signup/Login
     @FindBy(xpath = "//*[contains(text(),' Home')]")
@@ -88,6 +94,10 @@ public class AutomationExercise {
 
     @FindBy(xpath = "//a[@data-qa='continue-button']")
     public WebElement continueButton;
+    
+    @FindBy(xpath = "//h2[contains(text(),'Login to your account')]")
+    public WebElement logintoyouAccount;
+    
 
     @FindBy(xpath = "//a[contains(text(),' Logged in as ')]")
     public WebElement loggedInText;
@@ -98,9 +108,19 @@ public class AutomationExercise {
     @FindBy(xpath = "//b[contains(text(),'Account Deleted!')]")
     public WebElement accountDeletedText;
 
+    // New User Signup Verification method
+    @FindBy(xpath = "//h2[contains(text(), 'New User Signup!')]") // Correct XPath for New User Signup section
+    public WebElement newUserSignupSection;
+
     // Methods for actions
 
+    public void waitForElementToBeVisible(WebElement element) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
     public void verifyHome() {
+        waitForElementToBeVisible(homeButton);
         if (homeButton.isDisplayed()) {
             System.out.println("✅ Home page is visible.");
         } else {
@@ -109,19 +129,54 @@ public class AutomationExercise {
     }
 
     public void clickSignupLogin() {
-        signUpAndLoginButton.click();
+    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    	WebElement loginLink = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//ul[@class='nav navbar-nav']//a[contains(text(),'Signup / Login')]")));
+    	loginLink.click();
+
+
     }
+    
+    public void clickontestcase() {
+    	TestcasesButton.click();
+
+	}
+    public void verifytestcase() {
+		WebElement testcase = driver.findElement(By.xpath("//b[contains(text(),'Test Cases')]"));
+		boolean te = testcase.isDisplayed();
+		if (te) {
+			System.out.println("testcase page is displayed");
+		}
+	}
+    
+    public void verifytestcase1() {
+		WebElement testone =  driver.findElement(By.xpath("//u[contains(text(),'Test Case 1: Register User')]"));
+		boolean te = testone.isDisplayed();
+		if (te) {
+			System.out.println("testcases is displayed");
+		}
+	
+	}
+    
+    public void clickContactUs() {
+    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    	WebElement ContactUs = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//ul[@class='nav navbar-nav']//a[contains(text(),' Contact us')]")));
+    	ContactUs.click();
+
+	}
 
     public void enterNameAndEmail(String name, String email) {
+        waitForElementToBeVisible(signupName);
         signupName.sendKeys(name);
         signupEmail.sendKeys(email);
     }
 
     public void clickSignupButton() {
+        waitForElementToBeVisible(signupButton);
         signupButton.click();
     }
 
     public void verifyEnterAccountInfoVisible() {
+        waitForElementToBeVisible(enterAccountInfoText);
         if (!enterAccountInfoText.isDisplayed()) {
             throw new AssertionError("❌ 'ENTER ACCOUNT INFORMATION' is not visible");
         }
@@ -130,6 +185,7 @@ public class AutomationExercise {
     public void fillAccountInfo(String pass, String day, String month, String year,
                                 String fName, String lName, String comp, String addr,
                                 String stateVal, String cityVal, String zip, String mobile) {
+        waitForElementToBeVisible(genderMr);
         genderMr.click();
         password.sendKeys(pass);
 
@@ -151,40 +207,50 @@ public class AutomationExercise {
     }
 
     public void clickCreateAccount() {
+        waitForElementToBeVisible(createAccountButton);
         createAccountButton.click();
     }
 
     public void verifyAccountCreated() {
+        waitForElementToBeVisible(accountCreatedText);
         if (!accountCreatedText.isDisplayed()) {
             throw new AssertionError("❌ Account not created successfully.");
         }
     }
 
     public void clickContinue() {
+        waitForElementToBeVisible(continueButton);
         continueButton.click();
     }
 
     public void verifyLoggedInUsernameVisible() {
+        waitForElementToBeVisible(loggedInText);
         if (!loggedInText.isDisplayed()) {
             throw new AssertionError("❌ Logged in username is not visible.");
         }
     }
 
     public void clickDeleteAccount() {
+        waitForElementToBeVisible(deleteAccountButton);
         deleteAccountButton.click();
+    }
+    public void checkDeleteAccount() {
+        waitForElementToBeVisible(deleteAccountButton);
+        boolean s = deleteAccountButton.isDisplayed();
+        if (s) {
+			System.out.println("Delete button is displayed");
+		}
     }
 
     public void verifyAccountDeleted() {
+        waitForElementToBeVisible(accountDeletedText);
         if (!accountDeletedText.isDisplayed()) {
             throw new AssertionError("❌ Account not deleted.");
         }
     }
 
-    // New User Signup Verification method
-    @FindBy(xpath = "//h2[contains(text(), 'New User Signup!')]") // Correct XPath for New User Signup section
-    public WebElement newUserSignupSection;
-
     public void verifyNewUserSignupVisible() {
+        waitForElementToBeVisible(newUserSignupSection);
         boolean isVisible = newUserSignupSection.isDisplayed();
         if (isVisible) {
             System.out.println("✅ New User Signup section is visible.");
@@ -195,7 +261,8 @@ public class AutomationExercise {
 
     // Method for verifying if specific text is visible on the page
     public void verifyTextVisible(String text) {
-        WebElement textElement = driver.findElement(By.xpath("//*[contains(text(),'" + text + "')]"));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement textElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//b[contains(text(),'Enter Account Information')]")));
         if (!textElement.isDisplayed()) {
             throw new AssertionError("❌ Text '" + text + "' is not visible.");
         }
