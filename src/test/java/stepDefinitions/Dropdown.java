@@ -15,16 +15,14 @@ import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Dropdown {
-    WebDriver driver = new ChromeDriver();
+    WebDriver driver;
 
-    //@Before
-    public void setUp() {
-        driver.get("https://demowebshop.tricentis.com/");
-    }
+   
 
     @Given("Notebook elements should be loaded properly")
     public void notebook_elements_should_be_loaded_properly() {
     	 WebDriverManager.chromedriver().setup();
+         driver = new ChromeDriver();
         driver.get("https://demowebshop.tricentis.com/notebooks");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
