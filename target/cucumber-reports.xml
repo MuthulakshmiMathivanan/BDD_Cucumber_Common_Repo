@@ -1,51 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="64.396" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-04-21T13:54:17.727471900Z">
-<testcase classname="Princy_18APR2025_Web_AHB" name="Validation of Login Credentials - #1.1" time="9.821">
+<testsuite name="Cucumber" time="20.237" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-04-22T01:41:53.201944100Z">
+<testcase classname="Princy_18APR2025_Web_AHB_Search" name="Seaching the hotels validation - #1.1" time="19.814">
 <system-out><![CDATA[
-Given User is on the Adactin Login page.....................................passed
-When User enters the valid "PrincyPrabha" and "Princy@119" for the Adactin site.passed
-And User clicks the login button............................................passed
-Then User should be redirected to Adactin Homepage..........................passed
-]]></system-out>
-</testcase>
-<testcase classname="Princy_18APR2025_Web_AHB" name="Validation of invalid Login Credentials - #1.1" time="9.384">
-<system-out><![CDATA[
-Given User is on the Adactin Login page.....................................passed
-When User enters the invalid "TestingPrincy" and "Test@12" for the Adactin site.passed
-And User clicks the login button............................................passed
-Then It should show the error msg...........................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Princy_18APR2025_Web_AHB" name="Validation of invalid Login Credentials - #1.2" time="12.4">
-<system-out><![CDATA[
-Given User is on the Adactin Login page.....................................passed
-When User enters the invalid "Testing" and "Test@123" for the Adactin site..passed
-And User clicks the login button............................................passed
-Then It should show the error msg...........................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Princy_18APR2025_Web_AHB" name="Validation of invalid Login Credentials - #1.1" time="9.406">
-<system-out><![CDATA[
-Given User is on the Adactin Login page.....................................passed
-When User enters the invalid "TestingSuthir" and "" for the Adactin site....passed
-And User clicks the login button............................................passed
-Then It should show the error msg as Enter Username or Enter password.......passed
-]]></system-out>
-</testcase>
-<testcase classname="Princy_18APR2025_Web_AHB" name="Validation of invalid Login Credentials - #1.2" time="12.339">
-<system-out><![CDATA[
-Given User is on the Adactin Login page.....................................passed
-When User enters the invalid "" and "Test@123" for the Adactin site.........passed
-And User clicks the login button............................................passed
-Then It should show the error msg as Enter Username or Enter password.......passed
-]]></system-out>
-</testcase>
-<testcase classname="Princy_18APR2025_Web_AHB" name="Validation of invalid Login Credentials - #1.3" time="10.436">
-<system-out><![CDATA[
-Given User is on the Adactin Login page.....................................passed
-When User enters the invalid "" and "" for the Adactin site.................passed
-And User clicks the login button............................................passed
-Then It should show the error msg as Enter Username or Enter password.......passed
+Given User should be in Adactin Hotel Home page.............................passed
+When User select the Location, Hotels, RoomType, NoOfRooms,.................passed
+And User Enters the checkIn and checkOut Date...............................passed
+And User select AdultsPerRoom, ChildrenPerRoom and Clicks the search button.passed
+And It should be redirected to Hotel booking page...........................passed
+And User select the hotel and continue for the payment......................passed
+And User should enter the "Princy", "Prabha", "Chennai", "5636366384729846", "VISA", "September", "2028", "198".passed
+And User click the bookNow..................................................passed
+Then it should show the Order Number........................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

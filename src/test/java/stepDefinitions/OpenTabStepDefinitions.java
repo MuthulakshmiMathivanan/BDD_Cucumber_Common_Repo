@@ -54,11 +54,4 @@ public class OpenTabStepDefinitions {
             }
         }
     }
-
-    @After
-    public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
-    }
 }
