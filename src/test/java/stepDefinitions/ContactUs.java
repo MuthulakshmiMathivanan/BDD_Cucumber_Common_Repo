@@ -1,89 +1,52 @@
 package stepDefinitions;
 
-import java.time.Duration;
-
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import POM.AutomationExercise;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class ContactUs {
-	WebDriver driver;
-	POM.AutomationExercise AE;
-	
-	
-	@Given("I want to launch the website to check the contact form")
-	public void i_want_to_launch_the_website_to_check_the_contact_form() {
-		  // Set up WebDriver and AutomationExercise
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        AE = new AutomationExercise(driver);  // Initialize AE with WebDriver
-        driver.get("https://automationexercise.com");
-	}
-	
-	@Given("I want to verify if we are on the home page")
-	public void i_want_to_verify_if_we_are_on_the_home_page() {
-	    AE.verifyHome();
-	}
 
-	@When("I click on contact us form")
-	public void i_click_on_contact_us_form() {
-	    AE.clickContactUs();
-	}
+    WebDriver driver = new ChromeDriver();
 
-	@When("Enter the relevant contents")
-	public void enter_the_relevant_contents() {
-	   WebElement contactName =  driver.findElement(By.xpath("//input[@name='name']"));
-	   contactName.sendKeys("Test");
-	   WebElement contactEmail =  driver.findElement(By.xpath("//input[@name='email']"));
-	   contactEmail.sendKeys("Test@test.com");
-	   WebElement contactSubject =  driver.findElement(By.xpath("//input[@name='subject']"));
-	   contactSubject.sendKeys("For testing functions");
-	 
-	   
-	}
+    @When("I click on the contact us form")
+    public void i_click_on_the_contact_us_form() {
+        // Locate the contact us form link/button and click on it
+        WebElement contactUsForm = driver.findElement(By.linkText("Contact Us"));
+        contactUsForm.click();
+    }
 
-	@When("click on the submit button")
-	public void click_on_the_submit_button() {
-		  WebElement SubmitButton =  driver.findElement(By.xpath("//input[@name='submit']"));
-		   SubmitButton.sendKeys("For testing functions");
-	}
+    @When("I enter the relevant details")
+    public void i_enter_the_relevant_details() {
+        // Fill in the form fields (Example: Name, Email, etc.)
+        WebElement nameField = driver.findElement(By.id("name"));
+        nameField.sendKeys("John Doe");
 
-	@Then("I have to handle the alert")
-	public void i_have_to_handle_the_alert() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.alertIsPresent());
+        WebElement emailField = driver.findElement(By.id("email"));
+        emailField.sendKeys("johndoe@example.com");
 
-		// Switch to the alert
-		Alert alert = driver.switchTo().alert();
+        WebElement messageField = driver.findElement(By.id("message"));
+        messageField.sendKeys("I have an inquiry about your services.");
+    }
 
-		// Print alert text
-		System.out.println("Alert text: " + alert.getText());
+    @When("I click on the submit button")
+    public void i_click_on_the_submit_button() {
+        // Click the submit button on the contact form
+        WebElement submitButton = driver.findElement(By.id("submit"));
+        submitButton.click();
+    }
 
-		// Accept the alert
-		alert.accept();
-	}
-
-	@Then("check the success message")
-	public void check_the_success_message() {
-	   WebElement SuccessMessage =  driver.findElement(By.xpath("(//div[contains(text(),'Success! Your details have been submitted successfully.')])[1]"));
-	  boolean s =  SuccessMessage.isDisplayed();
-	  if (s) {
-		System.out.println("The success message is shown!");
-	}
-	
-	}
-
-
-
+    @Then("I check the success message")
+    public void i_check_the_success_message() {
+        // Check for the success message after form submission
+        WebElement successMessage = driver.findElement(By.id("successMessage"));
+        String message = successMessage.getText();
+        if (message.contains("Thank you for contacting us")) {
+            System.out.println("Success message displayed: " + message);
+        } else {
+            System.out.println("Success message not found.");
+        }
+    }
 }

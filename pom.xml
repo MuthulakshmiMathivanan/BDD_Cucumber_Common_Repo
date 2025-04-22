@@ -21,6 +21,22 @@
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
             <version>5.5.1</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- JSONPath for REST Assured -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-path</artifactId>
+            <version>5.5.1</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- org.json for manual JSON handling -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20230227</version>
         </dependency>
 
         <!-- Selenium -->
@@ -30,7 +46,7 @@
             <version>4.20.0</version>
         </dependency>
 
-        <!-- WebDriverManager for ChromeDriver -->
+        <!-- WebDriverManager -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
@@ -63,7 +79,7 @@
             <version>1.0.6</version>
         </dependency>
 
-        <!-- JSpecify for nullness annotations -->
+        <!-- JSpecify (optional) -->
         <dependency>
             <groupId>org.jspecify</groupId>
             <artifactId>jspecify</artifactId>
@@ -74,7 +90,7 @@
 
     <build>
         <plugins>
-            <!-- Compiler Plugin -->
+            <!-- Maven Compiler -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -84,19 +100,19 @@
                 </configuration>
             </plugin>
 
-            <!-- Surefire Plugin to run tests -->
+            <!-- Surefire for test execution -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
                 <configuration>
                     <includes>
-                        <include>**/Runner.java</include> <!-- This will now match your actual runner -->
+                        <include>**/Runner.java</include>
                     </includes>
                 </configuration>
             </plugin>
 
-            <!-- Cucumber Report Plugin -->
+            <!-- Cucumber Reports -->
             <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
