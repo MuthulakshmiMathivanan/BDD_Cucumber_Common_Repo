@@ -1,85 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.automation</groupId>
-    <artifactId>MergedProject</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <groupId>jenex</groupId>
+    <artifactId>demo2</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
-        <!-- Selenium WebDriver -->
+        <!-- REST Assured -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>5.5.1</version>
+        </dependency>
+
+        <!-- JSONPath for REST Assured -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-path</artifactId>
+            <version>5.5.1</version>
+        </dependency>
+
+        <!-- org.json -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20230227</version>
+        </dependency>
+
+        <!-- Selenium -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.17.0</version>
+            <version>4.20.0</version>
+        </dependency>
+
+        <!-- JUnit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+        </dependency>
+
+        <!-- Cucumber -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.21.1</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>7.21.1</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-jvm-deps</artifactId>
+            <version>1.0.6</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>datatable-dependencies</artifactId>
+            <version>1.1.2</version>
         </dependency>
 
         <!-- WebDriverManager -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>5.7.0</version>
+            <version>5.9.2</version>
         </dependency>
 
-        <!-- SLF4J Logger -->
+        <!-- JSpecify -->
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>2.0.9</version>
-        </dependency>
-
-        <!-- Logback Logger -->
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.4.11</version>
-        </dependency>
-
-        <!-- Cucumber Core -->
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-java</artifactId>
-            <version>7.21.1</version>
-        </dependency>
-
-        <!-- Cucumber JUnit -->
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-junit</artifactId>
-            <version>7.21.1</version>
-            <scope>test</scope>
-        </dependency>
-
-        <!-- JUnit 4 (required by Cucumber JUnit) -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
-            <scope>test</scope>
+            <groupId>org.jspecify</groupId>
+            <artifactId>jspecify</artifactId>
+            <version>0.3.0</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
     <build>
         <plugins>
-            <!-- Maven Surefire Plugin for Test Execution -->
+            <!-- Surefire Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M7</version>
+                <version>3.0.0-M5</version>
                 <configuration>
                     <includes>
-                        <include>**/TestRunner.java</include>
+                        <include>**/*RunnerTest.java</include>
                     </includes>
-                    <useModulePath>false</useModulePath>
+                    <parallel>methods</parallel>
+                    <threadCount>2</threadCount> <!-- Adjust based on system capabilities -->
                 </configuration>
             </plugin>
         </plugins>
     </build>
+
 </project>
