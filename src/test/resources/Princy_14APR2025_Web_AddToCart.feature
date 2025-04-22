@@ -1,4 +1,4 @@
-@Princy
+@PrincyAll
 Feature: Princy_14APR2025_Web_AddToCart
   I want to add product to cart
  

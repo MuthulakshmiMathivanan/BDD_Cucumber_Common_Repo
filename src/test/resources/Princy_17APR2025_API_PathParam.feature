@@ -1,4 +1,4 @@
-@PrincyPath
+@PrincyAll
 Feature: Princy_17APR2025_Api_PathParameter
   
   Scenario: Validate GET API using RESTASSURED with path parameter

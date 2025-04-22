@@ -1,4 +1,4 @@
-@Princy
+@PrincyAll
 Feature: Princy_14APR2025_Web_Checkout
 
   Scenario: Proceed to checkout with an item in the cart

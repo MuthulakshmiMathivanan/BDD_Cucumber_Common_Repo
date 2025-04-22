@@ -1,4 +1,4 @@
-@PrincyAHBSearch
+@PrincyAll
 Feature: Princy_18APR2025_Web_AHB_Search
  
   Scenario Outline: Seaching the hotels validation

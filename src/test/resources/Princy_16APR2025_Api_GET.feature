@@ -1,4 +1,4 @@
-@PrincyAPI
+@PrincyAll
 Feature: Princy_16APR2025_Api_GET
   I want to vaildate get APi
  
