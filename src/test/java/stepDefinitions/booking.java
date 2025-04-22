@@ -79,16 +79,8 @@ public class booking {
         } else {
             System.out.println("❌ Booking failed, no cancel button found.");
         }
-      
-
-    }
-
-    @After
-public void close(){
-    if(driver != null){
         driver.close();
-    }
-}
 
+    }
 
 }

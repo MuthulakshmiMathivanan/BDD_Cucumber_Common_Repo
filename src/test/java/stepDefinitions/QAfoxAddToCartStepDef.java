@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.cucumber.java.en.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class QAAddToCartStepDef {
+public class QAfoxAddToCartStepDef {
 
     WebDriver driver = new ChromeDriver();
 

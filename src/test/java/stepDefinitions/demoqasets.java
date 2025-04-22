@@ -213,13 +213,9 @@ public void i_select_the_checkbox_should_be_selected(String checkboxName) {
         // Validate selection
         Assert.assertTrue("❌ Radio button '" + radioButtonLabel + "' is NOT selected!", radioButton.isSelected());
         System.out.println("✅ Radio button '" + radioButtonLabel + "' is selected successfully.");
+    driver.quit();
     }
-@After
-public void tearDown() {
-    if (driver != null) {
-        driver.quit();
-    }
-}
+
 }
 
 

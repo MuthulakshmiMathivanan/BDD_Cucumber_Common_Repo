@@ -17,7 +17,7 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class QAAddAdresssStepDef {
+public class QAfoxAddAdresssStepDef {
 	
 	WebDriver driver = new ChromeDriver();
 

@@ -1,4 +1,5 @@
-Feature: Validate Activity API
+@PrincyAll
+Feature: Princy_10APR2025_API_Get
 
   Scenario: Get all activities and validate the first one
     Given The API is up and running
