@@ -1,5 +1,5 @@
 @Abar
-Feature: Login Functionality
+Feature: Abarna_BBD_21APR_2025_Login Functionality
 
   Scenario: Login user with incorrect email and password
  Given Launch browser and navigate to AutomationTester url

@@ -1,6 +1,6 @@
 @Abar
 
-Feature: User Should able to signup
+Feature: Abarna_BBD_21APR_2025_User Should able to signup
 
   Scenario: User should be able to sign up 
     Given Launch browser and navigate to AutomationTester url

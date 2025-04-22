@@ -1,5 +1,5 @@
 @Abar
-Feature: User Should able to signup
+Feature: Abarna_BBD_21APR_2025_User Should able to signup and register new user
 Scenario: User should be able to sign up and register new user
     Given Launch browser and navigate to AutomationTester url
     When Click on Signup button
