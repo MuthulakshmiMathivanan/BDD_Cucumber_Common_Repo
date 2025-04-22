@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import io.cucumber.java.After;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -20,6 +21,7 @@ public class OpenTabStepDefinitions {
 
     @Given("I enter the URL of the practice page")
     public void i_enter_the_url_of_practice_page() {
+    	 WebDriverManager.chromedriver().setup();
         driver.get("https://rahulshettyacademy.com/AutomationPractice/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
         mainWindowHandle = driver.getWindowHandle(); // Save the main window handle

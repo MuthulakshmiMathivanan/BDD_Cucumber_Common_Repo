@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Voting {
      WebDriver driver = new ChromeDriver();
@@ -21,7 +22,7 @@ public class Voting {
     @Given("I logged into the applications")
     public void i_logged_into_the_applications() {
        
-
+    	 WebDriverManager.chromedriver().setup();
         driver.manage().window().maximize();
         driver.get("https://demowebshop.tricentis.com/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  

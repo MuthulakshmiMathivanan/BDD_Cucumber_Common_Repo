@@ -18,6 +18,7 @@ import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class booking {
     WebDriver driver = new ChromeDriver();
@@ -26,6 +27,7 @@ public class booking {
 
     @Given("Open the booking application")
     public void open_the_booking_application() {
+    	 WebDriverManager.chromedriver().setup();
         driver.get("https://automationintesting.online/");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  

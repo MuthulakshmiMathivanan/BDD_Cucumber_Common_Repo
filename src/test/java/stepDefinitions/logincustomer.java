@@ -13,6 +13,7 @@ import io.cucumber.java.en.When;
 
 public class logincustomer {
     WebDriver driver = new ChromeDriver();
+  //  WebDriverManager.chromedriver().setup();
     @Given("I enter the shop login url of domain")
 public void i_enter_the_shop_login_url_of_domain() {
     driver.get("https://demowebshop.tricentis.com/login");

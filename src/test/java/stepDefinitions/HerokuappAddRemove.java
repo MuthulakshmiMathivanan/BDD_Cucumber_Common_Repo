@@ -13,6 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class HerokuappAddRemove {
 
@@ -20,7 +21,7 @@ public class HerokuappAddRemove {
 
 	@Given("user lauch the herokuapp automation page")
 	public void user_lauch_the_herokuapp_automation_page() {
-
+		 WebDriverManager.chromedriver().setup();
 		driver.get("https://the-internet.herokuapp.com/");
 
 	}

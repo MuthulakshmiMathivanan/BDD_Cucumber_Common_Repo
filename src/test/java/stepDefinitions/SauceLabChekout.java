@@ -11,6 +11,7 @@ import POM.SauceDemoelement;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SauceLabChekout {
 	
@@ -21,6 +22,7 @@ public class SauceLabChekout {
 	
 	@Given("User launch The Application")
 public void user_launch_the_application() {
+		 WebDriverManager.chromedriver().setup();
 	driver.get("https://www.saucedemo.com/");
 		sauce.user_name().sendKeys("standard_user");
 		sauce.password().sendKeys("secret_sauce");

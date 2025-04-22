@@ -10,12 +10,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class registration {
       WebDriver driver = new ChromeDriver();
     
     @Given("I enter the registration url of domain")
 public void i_enter_the_registration_url_of_domain() {
+    	 WebDriverManager.chromedriver().setup();
     driver.get("https://demowebshop.tricentis.com/register");
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
     driver.getTitle();

@@ -10,11 +10,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SerachCompDB {
     WebDriver driver=new ChromeDriver();
     @Given("I enter the Search url of ComputerDatabase")
 public void i_enter_the_search_url_of_computer_database() {
+    	 WebDriverManager.chromedriver().setup();
     // Write code here that turns the phrase above into concrete actions
     driver.get("https://computer-database.gatling.io/computers?f=SA");
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  

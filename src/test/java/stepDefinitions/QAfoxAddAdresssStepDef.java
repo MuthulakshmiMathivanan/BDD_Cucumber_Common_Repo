@@ -15,6 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class QAfoxAddAdresssStepDef {
 	
@@ -22,6 +23,7 @@ public class QAfoxAddAdresssStepDef {
 
 	@Given("I am logged in to my account")
 	public void i_am_logged_in_to_my_account() throws InterruptedException {
+		 WebDriverManager.chromedriver().setup();
 		driver.get("https://tutorialsninja.com/demo/");
 		driver.manage().window().maximize();
 		Thread.sleep(3000);

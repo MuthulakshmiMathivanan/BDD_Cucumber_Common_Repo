@@ -11,12 +11,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 import io.cucumber.java.en.*;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class QAfoxComponentsStepDef {
 	
 	WebDriver driver = new ChromeDriver();
 	@Given("the user is on the homepage")
 	public void the_user_is_on_the_homepage() throws InterruptedException {
+		 WebDriverManager.chromedriver().setup();
 		driver.get("https://tutorialsninja.com/demo/");
 		driver.manage().window().maximize();
 		Thread.sleep(3000);

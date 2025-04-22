@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.cucumber.java.en.*;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class QACheckOutStepDef {
 
@@ -15,6 +16,7 @@ public class QACheckOutStepDef {
 
     @Given("the user is logged in and has {string} in the cart")
     public void user_logged_in_and_has_item_in_cart(String productName) {
+    	 WebDriverManager.chromedriver().setup();
         driver.get("https://www.saucedemo.com/");
         driver.findElement(By.id("user-name")).sendKeys("standard_user");
         driver.findElement(By.id("password")).sendKeys("secret_sauce");

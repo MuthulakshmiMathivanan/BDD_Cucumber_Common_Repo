@@ -1,16 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="20.237" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-04-22T01:41:53.201944100Z">
-<testcase classname="Princy_18APR2025_Web_AHB_Search" name="Seaching the hotels validation - #1.1" time="19.814">
+<testsuite name="Cucumber" time="220.363" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-04-21T07:50:17.848944300Z">
+<testcase classname="User Should able to signup" name="User should be able to sign up" time="71.18">
 <system-out><![CDATA[
-Given User should be in Adactin Hotel Home page.............................passed
-When User select the Location, Hotels, RoomType, NoOfRooms,.................passed
-And User Enters the checkIn and checkOut Date...............................passed
-And User select AdultsPerRoom, ChildrenPerRoom and Clicks the search button.passed
-And It should be redirected to Hotel booking page...........................passed
-And User select the hotel and continue for the payment......................passed
-And User should enter the "Princy", "Prabha", "Chennai", "5636366384729846", "VISA", "September", "2028", "198".passed
-And User click the bookNow..................................................passed
-Then it should show the Order Number........................................passed
+Given Launch browser and navigate to AutomationTester url...................passed
+Then Verify that home page is visible successfully..........................passed
+When Click on Signup button.................................................passed
+Then Verify new sign up is visible..........................................passed
+And Enter name and email address............................................passed
+And Click 'Signup' button...................................................passed
+And Finally i close the browserrr...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Should able to signup" name="User should be able to sign up and register new user" time="83.87">
+<system-out><![CDATA[
+Given Launch browser and navigate to AutomationTester url...................passed
+When Click on Signup button.................................................passed
+And Enter name and email address............................................passed
+And Click 'Signup' button...................................................passed
+And Fill details: Title, Name, Email, Password, Date of birth...............passed
+And Select checkbox 'Sign up for our newsletter!'...........................passed
+And Select checkbox 'Receive special offers from our partners!'.............passed
+And Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number.passed
+And Click 'Create Account button'...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Login user with incorrect email and password" time="64.735">
+<system-out><![CDATA[
+Given Launch browser and navigate to AutomationTester url...................passed
+Then Verify that home page is visible successfully..........................passed
+When Click on Signup button.................................................passed
+Then Verify 'Login to your account' is visible..............................passed
+And Enter correct email address and password................................passed
+And Clicks 'login' button...................................................passed
+And Finally i close the browserrr...........................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

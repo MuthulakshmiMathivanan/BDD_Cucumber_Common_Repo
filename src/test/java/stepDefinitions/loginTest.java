@@ -16,7 +16,7 @@ import io.cucumber.java.en.When;
 public class loginTest {
     WebDriver driver = new ChromeDriver();
     LoginPage loginPage = new LoginPage(driver);
-
+    
     @FindBy(xpath="//input[@class='button-1 login-button']")
     WebElement loginbtn;
 

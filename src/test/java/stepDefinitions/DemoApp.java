@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DemoApp {
     
@@ -19,6 +20,7 @@ WebDriver driver = new ChromeDriver();
 
 @Given("The app url should be loaded properly")
 public void the_app_url_should_be_loaded_properly() {
+	 WebDriverManager.chromedriver().setup();
     driver.get("https://codebase.show/projects/realworld");
     driver.manage().window().maximize(); 
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));   

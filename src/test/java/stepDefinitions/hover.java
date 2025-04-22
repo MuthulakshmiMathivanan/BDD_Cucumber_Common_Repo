@@ -19,6 +19,7 @@ import io.cucumber.java.en.When;
 
 public class hover {
     WebDriver driver = new ChromeDriver();
+    //WebDriverManager.chromedriver().setup();
     @Given("I enter the url of domains")
 public void i_enter_the_url_of_domains() {
     driver.get("https://demowebshop.tricentis.com/");
