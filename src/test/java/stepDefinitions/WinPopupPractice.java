@@ -50,11 +50,5 @@ public void i_can_see_open_window_page_successfully() {
         }
     }
 }
-    @After
-    public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
     }
-}
 

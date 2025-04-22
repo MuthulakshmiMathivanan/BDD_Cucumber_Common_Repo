@@ -1,4 +1,4 @@
-@PrincyAPI
+@PrincyAll
 Feature: Princy_16APR2025_Api_POST
   I want to validate POST API
 

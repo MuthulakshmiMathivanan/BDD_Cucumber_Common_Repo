@@ -1,4 +1,4 @@
-@PrincyOrangeHRM
+@PrincyAll
 Feature: Princy_15APR2025_Web_OrangeHRM_AddEmp
    As an HR Admin
   I want to add a new employee

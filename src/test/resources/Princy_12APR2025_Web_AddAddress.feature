@@ -1,4 +1,4 @@
-@Princy
+@PrincyAll
 Feature: Princy_11APR2025_Web_MyAccount_Add Address
   
   As a registered user
