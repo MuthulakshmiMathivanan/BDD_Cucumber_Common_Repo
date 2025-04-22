@@ -99,6 +99,8 @@
                     <includes>
                         <include>**/*RunnerTest.java</include>
                     </includes>
+                    <parallel>methods</parallel>
+                    <threadCount>2</threadCount> <!-- Adjust based on system capabilities -->
                 </configuration>
             </plugin>
         </plugins>
