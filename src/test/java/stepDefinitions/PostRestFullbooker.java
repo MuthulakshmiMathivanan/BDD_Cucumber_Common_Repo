@@ -6,17 +6,12 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import io.*;
 import com.google.gson.JsonObject;
 
 
 import static io.restassured.RestAssured.*;
 import static org.junit.Assert.*;
 
-
-
-
-import com.fasterxml.jackson.databind.util.JSONPObject;
 
 
 public class PostRestFullbooker {
