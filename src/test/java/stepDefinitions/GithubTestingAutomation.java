@@ -4,6 +4,10 @@ import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
 import io.restassured.response.Response;
 
 import com.google.gson.JsonObject;
@@ -18,9 +22,17 @@ public class GithubTestingAutomation {
     private Response response;
     private String repoName = "bdd-github-automation";
     private final String username = "rajasekar-inbasekaran-expleo";  
-    private final String token = "Bearer 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";
+    private  String token;
     @Given("I set the GitHub API base URI")
 public void i_set_the_git_hub_api_base_uri() {
+    Properties prop = new Properties();
+try {
+    prop.load(new FileInputStream("src/test/resources/config.properties"));
+} catch (IOException e) {
+    e.printStackTrace();
+}
+token = "Bearer "+prop.getProperty("GITHUB_TOKEN");
+System.out.println("Show token" + token);
     RestAssured.baseURI = "https://api.github.com/";
     
 }
