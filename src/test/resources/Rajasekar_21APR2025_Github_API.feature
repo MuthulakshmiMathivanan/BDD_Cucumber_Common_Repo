@@ -1,4 +1,4 @@
-@Raja
+@Rajasekar
 Feature: GitHub Repository CRUD via REST Assured
 
 Scenario: Create, update, delete, and verify a GitHub repo
