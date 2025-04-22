@@ -1,4 +1,3 @@
-@Raja
 Feature: Rajasekar_4APR_2025_HotelBooking
 
 Scenario:

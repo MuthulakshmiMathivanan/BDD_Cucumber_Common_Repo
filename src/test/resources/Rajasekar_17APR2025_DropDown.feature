@@ -1,4 +1,3 @@
-@Raja
 Feature: Rajasekar_17APR2025_DropDown
 
 Scenario:
