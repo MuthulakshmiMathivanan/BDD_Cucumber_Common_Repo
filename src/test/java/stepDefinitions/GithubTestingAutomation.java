@@ -18,7 +18,7 @@ public class GithubTestingAutomation {
     private Response response;
     private String repoName = "bdd-github-automation";
     private final String username = "rajasekar-inbasekaran-expleo";  
-    private final String token = "Bearer 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";
+    private final String token = "Bearer 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";
     @Given("I set the GitHub API base URI")
 public void i_set_the_git_hub_api_base_uri() {
     RestAssured.baseURI = "https://api.github.com/";

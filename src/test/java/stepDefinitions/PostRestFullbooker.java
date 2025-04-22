@@ -7,12 +7,15 @@ import io.cucumber.java.en.When;
 
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import io.restassured.RestAssured;
 
 import com.google.gson.JsonObject;
 
+import io.restassured.RestAssured;
+
+
 import static io.restassured.RestAssured.*;
 import static org.junit.Assert.*;
+
 
 public class PostRestFullbooker {
 
