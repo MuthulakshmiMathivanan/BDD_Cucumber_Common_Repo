@@ -4,29 +4,24 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import io.*;
-import com.google.gson.JsonObject;
+import io.restassured.RestAssured;
 
+import com.google.gson.JsonObject;
 
 import static io.restassured.RestAssured.*;
 import static org.junit.Assert.*;
 
-
-
-
-import com.fasterxml.jackson.databind.util.JSONPObject;
-
-
 public class PostRestFullbooker {
 
-   RequestSpecification request;
+    RequestSpecification request;
     Response response;
 
     @Given("I set the base URI")
     public void i_set_base_uri() {
-        baseURI = "https://restful-booker.herokuapp.com";
+        RestAssured.baseURI = "https://restful-booker.herokuapp.com";
     }
 
     @When("I send POST request to \\/auth with valid credentials")
@@ -51,15 +46,7 @@ public class PostRestFullbooker {
     @And("I should receive a token in response")
     public void i_should_receive_token() {
         String token = response.jsonPath().getString("token");
-        assertNotNull(token);
+        assertNotNull("Token should not be null", token);
         System.out.println("Generated Token: " + token);
-        response.then().log().all();
     }
-
-
-
-
-   
 }
-
-
