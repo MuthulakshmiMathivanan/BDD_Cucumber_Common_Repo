@@ -11,24 +11,20 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.cucumber.java.en.Given;
-import io.cucumber.java.Before;
+
 
 public class LoginPage {
     WebDriver driver;
     POM.AutomationExercise AE;
 
-    @Before
-    public void setUp() {
-        // Set up WebDriver and AutomationExercise
+
+    @Given("I want to launch the automation exercise website")
+    public void i_want_to_launch_the_automation_exercise_website() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         AE = new AutomationExercise(driver);  // Initialize AE with WebDriver
         driver.get("https://automationexercise.com");
-    }
-
-    @Given("I want to launch the automation exercise website")
-    public void i_want_to_launch_the_automation_exercise_website() {
         System.out.println("Opening the automation exercise website...");
         
     }

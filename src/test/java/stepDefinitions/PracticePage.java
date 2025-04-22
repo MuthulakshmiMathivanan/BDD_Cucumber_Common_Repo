@@ -13,17 +13,21 @@ import org.openqa.selenium.support.ui.Select;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class PracticePage {
 
 
-	WebDriver driver = new ChromeDriver();
+ 
+	WebDriver driver; 
 
-	POM.PracticePage practice = new POM.PracticePage(driver);
+	POM.PracticePage practice; 
 
 	@Given("user lauch the automation practice")
 	public void user_lauch_the_automation_practice() {
-
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+		practice = new POM.PracticePage(driver);
 		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
 

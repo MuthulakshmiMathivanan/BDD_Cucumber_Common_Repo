@@ -1,33 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="60.554" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-04-22T02:59:52.346352100Z">
-<testcase classname="Rajasekar_4APR_2025_HotelBooking" name="" time="59.988">
+<testsuite name="Cucumber" time="220.363" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-04-21T07:50:17.848944300Z">
+<testcase classname="User Should able to signup" name="User should be able to sign up" time="71.18">
 <system-out><![CDATA[
-Given user launch The Application...........................................passed
-When user Enter The Username In Username Filed..............................passed
-And : User Enter The Password In Password Field.............................passed
-Then : User Click On The Login Button And It Navigates To Search Hotel Page.passed
-When : user Select The Location.............................................passed
-When : user Select The Hotel................................................passed
-When : user Select The RoomType.............................................passed
-When : user Select The NumberofRooms........................................passed
-When : user Enters The CheckinDate..........................................passed
-When : user Enters The CheckOutDate.........................................passed
-When : user Select The AdultPerRoom.........................................passed
-When : user Select The ChildrenPerRoom......................................passed
-Then : User Click on the Search Button And It Navigates To Select Hotel page.passed
-When : user Select The RadioButton..........................................passed
-When : user Select The ContinueButton.......................................passed
-When : user Enters The FirstName............................................passed
-When : user Enters The LastName.............................................passed
-When : user Enters The Address..............................................passed
-When : user Enters The CCN Number...........................................passed
-When : user Enters The CC TYpe..............................................passed
-When : user Enters The CC Expiry Month......................................passed
-When : user Enters The CC Expiry Year.......................................passed
-When : user Enters The CC CVV...............................................passed
-Then : User Click on the BookNow Button It Navigates To Booking Cofirmation Page.passed
-When : user Click My Itineary Button........................................passed
-Then : user Click Logout Button.............................................passed
+Given Launch browser and navigate to AutomationTester url...................passed
+Then Verify that home page is visible successfully..........................passed
+When Click on Signup button.................................................passed
+Then Verify new sign up is visible..........................................passed
+And Enter name and email address............................................passed
+And Click 'Signup' button...................................................passed
+And Finally i close the browserrr...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Should able to signup" name="User should be able to sign up and register new user" time="83.87">
+<system-out><![CDATA[
+Given Launch browser and navigate to AutomationTester url...................passed
+When Click on Signup button.................................................passed
+And Enter name and email address............................................passed
+And Click 'Signup' button...................................................passed
+And Fill details: Title, Name, Email, Password, Date of birth...............passed
+And Select checkbox 'Sign up for our newsletter!'...........................passed
+And Select checkbox 'Receive special offers from our partners!'.............passed
+And Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number.passed
+And Click 'Create Account button'...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Login user with incorrect email and password" time="64.735">
+<system-out><![CDATA[
+Given Launch browser and navigate to AutomationTester url...................passed
+Then Verify that home page is visible successfully..........................passed
+When Click on Signup button.................................................passed
+Then Verify 'Login to your account' is visible..............................passed
+And Enter correct email address and password................................passed
+And Clicks 'login' button...................................................passed
+And Finally i close the browserrr...........................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

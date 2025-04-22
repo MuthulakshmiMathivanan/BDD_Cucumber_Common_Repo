@@ -15,16 +15,14 @@ public class DemoBlazeLogin {
     WebDriver driver;
     DemoBlazePom demoBlaze;
 
-    @Before
-    public void setUp() {
+
+
+    @Given("I launch the website")
+    public void i_launch_the_website() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         demoBlaze = new DemoBlazePom(driver);
-    }
-
-    @Given("I launch the website")
-    public void i_launch_the_website() {
         driver.get("https://www.demoblaze.com/");
         System.out.println("Website launched successfully");
     }

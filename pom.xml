@@ -22,6 +22,20 @@
             <version>5.5.1</version>
         </dependency>
 
+        <!-- JSONPath for REST Assured -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-path</artifactId>
+            <version>5.5.1</version>
+        </dependency>
+
+        <!-- org.json -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20230227</version>
+        </dependency>
+
         <!-- Selenium -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -65,7 +79,7 @@
             <version>5.9.2</version>
         </dependency>
 
-        <!-- JSpecify for nullness annotations -->
+        <!-- JSpecify -->
         <dependency>
             <groupId>org.jspecify</groupId>
             <artifactId>jspecify</artifactId>
@@ -76,7 +90,7 @@
 
     <build>
         <plugins>
-            <!-- Surefire Plugin to run tests -->
+            <!-- Surefire Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -85,6 +99,8 @@
                     <includes>
                         <include>**/*RunnerTest.java</include>
                     </includes>
+                    <parallel>methods</parallel>
+                    <threadCount>2</threadCount> <!-- Adjust based on system capabilities -->
                 </configuration>
             </plugin>
         </plugins>
