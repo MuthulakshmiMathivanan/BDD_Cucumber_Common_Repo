@@ -10,23 +10,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.chrome.ChromeOptions;
-
 
 public class CompDBRegistration {
      
-     WebDriver driver;
+     WebDriver driver = new ChromeDriver();
     @Given("I enter the url of Registraion domain")
-public void i_enter_the_url_of_registraion_domain() {
-    ChromeOptions options = new ChromeOptions();
-options.addArguments("--headless=new"); // Use "--headless" if you're on older Chrome
-options.addArguments("--disable-gpu");
-options.addArguments("--no-sandbox");
-options.addArguments("--disable-dev-shm-usage");
-options.addArguments("--remote-debugging-port=9222"); 
-    WebDriverManager.chromedriver().setup();
-    driver=new ChromeDriver(options);
+public void i_enter_the_url_of_registraion_domain() {    
     // Write code here that turns the phrase above into concrete actions
      driver.get("https://demowebshop.tricentis.com/register");
      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
