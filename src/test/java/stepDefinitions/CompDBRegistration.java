@@ -12,10 +12,12 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class CompDBRegistration {
-     WebDriverManager.chromedriver().setup();
-     WebDriver driver=new ChromeDriver();
+     
+     WebDriver driver;
     @Given("I enter the url of Registraion domain")
 public void i_enter_the_url_of_registraion_domain() {
+    WebDriverManager.chromedriver().setup();
+    driver=new ChromeDriver();
     // Write code here that turns the phrase above into concrete actions
      driver.get("https://demowebshop.tricentis.com/register");
      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
