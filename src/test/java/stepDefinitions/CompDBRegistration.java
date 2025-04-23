@@ -12,6 +12,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class CompDBRegistration {
+     WebDriverManager.chromedriver().setup();
      WebDriver driver=new ChromeDriver();
     @Given("I enter the url of Registraion domain")
 public void i_enter_the_url_of_registraion_domain() {
