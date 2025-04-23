@@ -3,7 +3,6 @@ package stepDefinitions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -15,16 +14,14 @@ public class DemoBlazeLogin {
     WebDriver driver;
     DemoBlazePom demoBlaze;
 
-    @Before
-    public void setUp() {
+
+
+    @Given("I launch the website")
+    public void i_launch_the_website() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         demoBlaze = new DemoBlazePom(driver);
-    }
-
-    @Given("I launch the website")
-    public void i_launch_the_website() {
         driver.get("https://www.demoblaze.com/");
         System.out.println("Website launched successfully");
     }

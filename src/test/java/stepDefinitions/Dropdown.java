@@ -8,7 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -17,10 +16,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class Dropdown {
     WebDriver driver = new ChromeDriver();
 
-    //@Before
-    public void setUp() {
-        driver.get("https://demowebshop.tricentis.com/");
-    }
 
     @Given("Notebook elements should be loaded properly")
     public void notebook_elements_should_be_loaded_properly() {
