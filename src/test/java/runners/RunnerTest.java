@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
  
 @RunWith(Cucumber.class)
 @CucumberOptions(
- features = "src/test/resources/Arumugam_10APRIL2025_Web_CompDBReg.feature",
+ features = "src/test/resources",
         
         glue= {"stepDefinitions"},
         plugin = {"pretty", 
