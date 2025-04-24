@@ -17,7 +17,8 @@ import io.cucumber.junit.CucumberOptions;
               "json:target/cucumber-reports.json",
               "junit:target/cucumber-reports.xml"},
 
-                   dryRun=false
+                   dryRun=false,
+                   tags = "@Raja"
                    
 
                    
